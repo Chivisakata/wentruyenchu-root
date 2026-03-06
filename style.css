@@ -1,10 +1,11 @@
-/* General styling*/
+
+/* General styling */
 body
 {
     font-family: "Roboto Mono", "san-serif", "Arial";
 }
 
-/* Top navbar styling*/
+/* Top navbar styling */
 .navBar
 {
     background-color: rgb(26,26,26);
@@ -59,6 +60,7 @@ body
     object-fit: fill;
 }
 
+
 /* Menu Styling */
 
 .categories ul li
@@ -66,28 +68,56 @@ body
     list-style: none;
     
 }
-.novel
-{
-    display:flex;
+
+
+/* Just Update Menu */
+.justUpdate, .newest, .fullNovel {
+    display: flex;
     flex-direction: column;
-    
-}
-.novel img, p
-{
-    display:block;
+    padding: 20px;
 }
 
-.wrapper
-{
-    display:flex;
+
+.wrapper {
+    display: flex;
     flex-direction: row;
+    overflow-x: auto; 
+    gap: 20px;       
+    padding-bottom: 10px; 
 }
 
 
-.justUpdate div > img
-{
-    width:16%;
-    height:70%;
-    padding-left: 7px;
-    padding-right: 7px;
+.wrapper > div {
+    flex-shrink: 0;   
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper img {
+    width: 80%;      
+    height: auto;
+    border-radius: 8px;
+    aspect-ratio: 2 / 3; 
+    object-fit: cover;
+}
+
+/* Default: Show 4 items */
+@media (min-width: 1024px) {
+    .wrapper > div {
+        width: calc(25% - 15px); 
+    }
+}
+
+/* Tablet: Show 3 items */
+@media (min-width: 600px) and (max-width: 1023px) {
+    .wrapper > div {
+        width: calc(33.33% - 14px);
+    }
+}
+
+/* Mobile: Show 2 items */
+@media (max-width: 599px) {
+    .wrapper > div {
+        width: calc(50% - 10px);
+    }
 }
