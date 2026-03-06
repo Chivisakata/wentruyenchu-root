@@ -1,0 +1,93 @@
+/* General styling*/
+body
+{
+    font-family: "Roboto Mono", "san-serif", "Arial";
+}
+
+/* Top navbar styling*/
+.navBar
+{
+    background-color: rgb(26,26,26);
+    color:white;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
+}
+.navBar > div
+{
+    margin: 20px 20px 20px 20px;
+}
+.navBar p
+{
+    margin: 5px 0 0 0;
+}
+.navBar > img
+{
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    padding-top:10px;
+    padding-left: 20px;
+
+}
+.navBar input
+{
+    width: 50%;
+    height: 50%;
+    margin-left:60px;
+    border:none;
+    border-radius:9px;
+    padding-left: 10px;
+}
+.navBar button
+{
+    background: none;
+    width: 44px;
+    height:44px;
+    border:none;
+    margin-right:20px;
+}
+.navBar button:hover
+{
+    cursor: pointer;
+}
+.navBar button > img
+{
+    height:100%;
+    width:130%;
+    object-fit: fill;
+}
+
+/* Menu Styling */
+
+.categories ul li
+{
+    list-style: none;
+    
+}
+.novel
+{
+    display:flex;
+    flex-direction: column;
+    
+}
+.novel img, p
+{
+    display:block;
+}
+
+.justUpdate div
+{
+    display:flex;
+    flex-direction: row;
+    overflow-x: auto;
+}
+
+.justUpdate div > img
+{
+    width:16%;
+    height:70%;
+    padding-left: 7px;
+    padding-right: 7px;
+}
