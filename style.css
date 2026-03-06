@@ -77,12 +77,12 @@ body
     display:block;
 }
 
-.justUpdate div
+.wrapper
 {
     display:flex;
     flex-direction: row;
-    overflow-x: auto;
 }
+
 
 .justUpdate div > img
 {
