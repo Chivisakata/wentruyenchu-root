@@ -71,10 +71,11 @@ body
 
 
 /* Just Update Menu */
-.justUpdate, .newest, .fullNovel {
+.justUpdate, .newest, .fullNovel, .topOTW {
     display: flex;
     flex-direction: column;
     padding: 20px;
+    overflow-wrap: break-word;
 }
 
 
@@ -85,7 +86,6 @@ body
     gap: 20px;       
     padding-bottom: 10px; 
 }
-
 
 .wrapper > div {
     flex-shrink: 0;   
@@ -120,4 +120,29 @@ body
     .wrapper > div {
         width: calc(50% - 10px);
     }
+}
+
+.topOTW
+{
+    background-color: rgb(29,29,29);
+    color:white;
+}
+.topOTW .wrapper
+{
+    display: flex;
+    flex-direction: row; 
+    gap: 20px;       
+    padding-bottom: 10px; 
+    overflow-x: visible;
+    flex-wrap: wrap;
+}
+.topOTW .wrapper div
+{
+    height: 300px;
+}
+.topOTW img
+{
+    width:100%;
+    height:60%;
+    gap: 20px;
 }
