@@ -71,11 +71,61 @@ body
 
 
 /* Just Update Menu */
-.justUpdate, .newest, .fullNovel, .topOTW {
+.justUpdate, .newest, .fullNovel, .topOTW, .mostLoved {
     display: flex;
     flex-direction: column;
     padding: 20px;
     overflow-wrap: break-word;
+}
+
+.justUpdate > div:first-child, 
+.newest > div:first-child, 
+.fullNovel > div:first-child, 
+.topOTW > div:first-child, 
+.mostLoved > div:first-child
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom:10px;
+}
+.justUpdate > div button,
+.newest > div button, 
+.fullNovel > div button, 
+.topOTW > div button, 
+.mostLoved > div button
+{
+    width:5%;
+    height:auto;
+    font-size: 20px;
+    border:none;
+    border-radius:30px;
+    background-color: white;
+}
+
+.topOTW > div button, .mostLoved > div button
+{
+    background-color: rgb(29,29,29);
+    color:white;
+}
+
+.justUpdate > div button:hover,
+.newest > div button:hover, 
+.fullNovel > div button:hover, 
+.topOTW > div button:hover, 
+.mostLoved > div button:hover
+{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.justUpdate > div button:active,
+.newest > div button:active, 
+.fullNovel > div button:active, 
+.topOTW > div button:active, 
+.mostLoved > div button:active
+{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 
@@ -122,12 +172,12 @@ body
     }
 }
 
-.topOTW
+.topOTW, .mostLoved
 {
     background-color: rgb(29,29,29);
     color:white;
 }
-.topOTW .wrapper
+.topOTW .wrapper, .mostLoved .wrapper
 {
     display: flex;
     flex-direction: row; 
@@ -136,11 +186,11 @@ body
     overflow-x: visible;
     flex-wrap: wrap;
 }
-.topOTW .wrapper div
+.topOTW .wrapper div, .mostLoved .wrapper div
 {
     height: 300px;
 }
-.topOTW img
+.topOTW img, .mostLoved img
 {
     width:100%;
     height:60%;
