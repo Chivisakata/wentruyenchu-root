@@ -136,6 +136,11 @@ body
     gap: 20px;       
     padding-bottom: 10px; 
 }
+.topOTW, .mostLoved
+{
+    background-color: rgb(29,29,29);
+    color:white;
+}
 
 .wrapper > div {
     flex-shrink: 0;   
@@ -172,27 +177,4 @@ body
     }
 }
 
-.topOTW, .mostLoved
-{
-    background-color: rgb(29,29,29);
-    color:white;
-}
-.topOTW .wrapper, .mostLoved .wrapper
-{
-    display: flex;
-    flex-direction: row; 
-    gap: 20px;       
-    padding-bottom: 10px; 
-    overflow-x: visible;
-    flex-wrap: wrap;
-}
-.topOTW .wrapper div, .mostLoved .wrapper div
-{
-    height: 300px;
-}
-.topOTW img, .mostLoved img
-{
-    width:100%;
-    height:60%;
-    gap: 20px;
-}
+
