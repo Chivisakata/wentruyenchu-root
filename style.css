@@ -176,6 +176,10 @@ body
     justify-content: center;
     align-items: center;
 }
+.wrapper div >p{
+    text-align: center;
+}
+
 
 
 .wrapper img {
