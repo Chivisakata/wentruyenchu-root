@@ -87,17 +87,18 @@
         </style>
     </head>
     <body>
-        <div class="box">
+        <form class="box">
+        
                 <h2>Đăng Nhập</h2>
             
                 <p>Tài Khoản</p>
-                <input type="text" placeholder="Nhập thông tin tài khoản">
+                <input type="text" placeholder="Nhập thông tin tài khoản" required>
             
                 <p>Mật Khẩu</p>
-                <input type="password" placeholder="Nhập mật khẩu">
+                <input type="password" placeholder="Nhập mật khẩu" required>
 
                 <div>
-                    <button class="loginBtn">Đăng nhập</button>
+                    <button type="submit" class="loginBtn" id="loginBtn">Đăng nhập</button>
                     <button class="registerBtn" id="registerBtn">Đăng ký</button>
                     <script>
                     document.getElementById("registerBtn").onclick = function () {
@@ -105,6 +106,6 @@
                 };
                 </script>
                 </div>
-        </div>
+        </form>
     </body>
 </html>
