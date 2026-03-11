@@ -70,18 +70,18 @@ body
     width:130%;
     object-fit: fill;
 }
-.loginBtn
+#loginBtn
 {
     color:white;
     width:90px;
     height:50px;
 }
-.loginBtn:hover
+#loginBtn:hover
 {
     border: 3px solid #ffff;
     border-radius:5px;
 }
-.loginBtn:active
+#loginBtn:active
 {
     background-color: rgba(189, 189, 189, 0.2);
 }

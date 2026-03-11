@@ -98,7 +98,12 @@
 
                 <div>
                     <button class="loginBtn">Đăng nhập</button>
-                    <button class="registerBtn">Đăng ký</button>
+                    <button class="registerBtn" id="registerBtn">Đăng ký</button>
+                    <script>
+                    document.getElementById("registerBtn").onclick = function () {
+                    window.location.href = "register.php";
+                };
+                </script>
                 </div>
         </div>
     </body>

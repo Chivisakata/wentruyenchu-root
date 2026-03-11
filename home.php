@@ -25,7 +25,14 @@
                     <input type="text" placeholder="Nhập tên truyện muốn tìm...">
                     <button class="searchIcon"><img src="images/search-icon.png"></button>
                 </div>
-                <button class="loginBtn">Đăng nhập</button>
+                
+                
+                <button id="loginBtn">Đăng nhập</button>
+                <script>
+                    document.getElementById("loginBtn").onclick = function () {
+                    window.location.href = "login.php";
+                };
+                </script>
                     
             </div>
             
