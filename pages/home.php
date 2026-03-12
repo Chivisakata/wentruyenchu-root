@@ -103,10 +103,10 @@
 
                             while($row = mysqli_fetch_assoc($result)) {
                             ?>
-                                <div>
-                                    <img src="../images/<?php echo $row['AnhBia']; ?>">
-                                    <p><?php echo $row['Ten']; ?></p>
-                                </div>
+                                    <a href="details.php?id=<?php echo $row['Id_truyen']; ?>">
+                                        <img src="../images/<?php echo $row['AnhBia']; ?>">
+                                        <p><?php echo $row['Ten']; ?></p>
+                                    </a>
                             <?php
                             }
                             ?>
@@ -119,41 +119,41 @@
                         <button>></button>
                     </div>
                     <div class="wrapper">
-                        <div>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
+                        </a>
                         
                     </div>
                 </div>
@@ -166,41 +166,41 @@
                     </div>
                     
                     <div class="wrapper">
-                        <div>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
+                        </a>
                         
                     </div>
                 </div>
@@ -212,41 +212,41 @@
                         <button>></button>
                     </div>
                     <div class="wrapper">
-                        <div>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
+                        </a>
                         
                     </div>
                 </div>
@@ -259,41 +259,41 @@
                     </div>
                     
                     <div class="wrapper">
-                        <div>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
-                        <div>
+                        </a>
+                        <a>
                             <img src="../images/placeholder.jpg">
                             <p>TenTP</p>
                             <p>TenTG</p>
-                        </div>
+                        </a>
                         
                     </div>
                 </div>

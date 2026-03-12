@@ -2,11 +2,13 @@
 body
 {
     font-family: "Roboto Mono", "san-serif", "Arial";
+    margin: 0;
 }
 
 /* Top navbar styling */
 .navBar
 {
+    margin: 0;
     background-color: rgb(26,26,26);
     color:white;
     display:flex;

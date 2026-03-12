@@ -106,19 +106,20 @@ body
     flex-direction: row;
     white-space: nowrap;
     overflow-x: auto;
+    margin-left: -7px;
+    margin-right: 16px;
 }
-.categories ul li
+.categories li
 {
     list-style: none;
     padding: 15px;
     display:inline;
+    background-color: rgb(228, 228, 228); ;
 
 }
 .categories li:hover
 {
-    border:2px solid black;
-    border-radius:20px;
-
+    filter:brightness(70%); 
 }
 
 
@@ -189,20 +190,23 @@ body
     gap: 20px;       
     padding-bottom: 10px; 
 }
+
 .topOTW, .mostLoved
 {
     background-color: rgb(29,29,29);
     color:white;
 }
 
-.wrapper > div {
+.wrapper > a {
     flex-shrink: 0;   
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    color: inherit;
 }
-.wrapper div >p{
+.wrapper a > p{
     text-align: center;
 }
 
@@ -218,21 +222,21 @@ body
 
 /* Default: Show 4 items */
 @media (min-width: 1024px) {
-    .wrapper > div {
+    .wrapper > a {
         width: calc(25% - 15px); 
     }
 }
 
 /* Tablet: Show 3 items */
 @media (min-width: 600px) and (max-width: 1023px) {
-    .wrapper > div {
+    .wrapper > a {
         width: calc(33.33% - 14px);
     }
 }
 
 /* Mobile: Show 2 items */
 @media (max-width: 599px) {
-    .wrapper > div {
+    .wrapper > a {
         width: calc(50% - 10px);
     }
 }
