@@ -15,7 +15,7 @@
         <div>
             <div class="navBar">
                 <div class="left">
-                    <img src="images/gamingcat.jpg">
+                    <img src="../images/gamingcat.jpg">
                     <div>
                         <p>Xin chào</p>
                         <p>Bạn đọc {NgườiDung}</p>
@@ -23,7 +23,7 @@
                 </div>
                 <div style="display: flex; flex-direction: row; width:60%;">
                     <input type="text" placeholder="Nhập tên truyện muốn tìm...">
-                    <button class="searchIcon"><img src="images/search-icon.png"></button>
+                    <button class="searchIcon"><img src="../images/search-icon.png"></button>
                 </div>
                 
                 
