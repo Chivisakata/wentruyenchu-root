@@ -106,17 +106,16 @@
         }
         ?>
 
-        <form class="loginForm">
+        <form class="loginForm" name="loginForm" action="../actions/loginProcess.php" method="POST">
                 <h2>Đăng Nhập</h2>
                 <p>Tài Khoản</p>
-                <input type="text" placeholder="Nhập thông tin tài khoản" required>
+                <input type="text" placeholder="Nhập thông tin tài khoản" name="username" required>
             
                 <p>Mật Khẩu</p>
-                <input type="password" placeholder="Nhập mật khẩu" required>
-
+                <input type="password" placeholder="Nhập mật khẩu"  name="password" required>
                 <div>
-                    <button type="submit" class="loginBtn" id="loginBtn">Đăng nhập</button>
-                    <button class="registerBtn" id="registerBtn">Đăng ký</button>
+                    <button type="submit" class="loginBtn" id="loginBtn">Đăng nhập</button> 
+                    <button type="button" class="registerBtn" id="registerBtn">Đăng ký</button>
                     <script>
                     document.getElementById("registerBtn").onclick = function () {
                     window.location.href = "register.php";

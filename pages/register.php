@@ -81,7 +81,7 @@
         </style>
     </head>
     <body>
-        <form class="registerForm" id="registerForm" action="../actions/checkValidInput.php" method="POST">
+        <form class="registerForm" id="registerForm" action="../actions/registerProcess.php" method="POST">
                 <h2>Đăng ký</h2>
                 <p>Tài Khoản</p>
                 <input type="text" id="username" name="username" placeholder="Nhập thông tin tài khoản" required minlength="6" maxlength="20">

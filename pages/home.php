@@ -11,14 +11,25 @@
     </head>
 
     <body>
+        <?php
+        session_start();// Bắt đầu session để truy cập biến session
+        if(isset($_SESSION['User_name'])) {
+            $username = $_SESSION['User_name'];
+            $avatar = $_SESSION['Avatar'];
+        }
+        else {
+            $username = "";
+            $avatar = "gamingcat.jpg";
+        }
+        ?>
 <!----TOP---->
         <div>
             <div class="navBar">
                 <div class="left">
-                    <img src="../images/gamingcat.jpg">
+                    <img src="../images/<?php echo $avatar; ?>">
                     <div>
                         <p>Xin chào</p>
-                        <p>Bạn đọc {NgườiDung}</p>
+                        <p>Bạn đọc <?php echo $username; ?></p>
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: row; width:60%;">
