@@ -55,6 +55,37 @@
                         <li>Hài Hước</li>
                         <li>Dưỡng Thê</li>
                         <li>Cổ Đại</li>
+                        <li>Điền Văn</li>
+                        <li>Trọng Sinh</li>
+                        <li>Hào Môn Thế Gia</li>
+                        <li>Hệ Thống</li>
+                        <li>Dị Năng</li>
+                        <li>Đô Thị</li>
+                        <li>Cưới Trước Yêu Sau</li>
+                        <li>Xuyên Sách</li>
+                        <li>Hư Cấu Kỳ Ảo</li>
+                        <li>Tiểu Thuyết</li>
+                        <li>Linh Dị</li>
+                        <li>Mỹ Thực</li>
+                        <li>Gia Đấu</li>
+                        <li>Hành Động</li>
+                        <li>Tổng Tài</li>
+                        <li>Kinh Dị</li>
+                        <li>Truy Thê</li>
+                        <li>Ngược</li>
+                        <li>Hoán Đổi Thân Xác</li>
+                        <li>Trả Thù</li>
+                        <li>Học Đường</li>
+                        <li>Tiên Hiệp</li>
+                        <li>Showbiz</li>
+                        <li>Đam Mỹ</li>
+                        <li>Trinh Thám</li>
+                        <li>Bách Hợp</li>
+                        <li>Phiêu Lưu</li>
+                        <li>Độc Tâm</li>
+                        <li>Phép Thuật</li>
+                        <li>BE</li>
+                        <li>OE</li>
                     </ul>
                 </div>
 
