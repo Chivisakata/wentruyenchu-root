@@ -54,7 +54,8 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("ss", $username, $hashedPassword);
 
 if ($stmt->execute()) {
-    echo "Đăng ký thành công";
+    header("Location: ../pages/login.php");
+    exit();
 } else {
     echo "Lỗi: " . $stmt->error;
 }
