@@ -22,7 +22,7 @@
                 padding-left:28px;
             }
             
-            .box
+            .loginForm
             {
                 background-color: rgb(29,29,29);
                 width:600px;
@@ -31,11 +31,11 @@
                 border-radius:30px;
                 box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
             }
-            .box div
+            .loginForm div
             {
                 margin-top:30px;
             }
-            .box h2
+            .loginForm h2
             {
                 text-align: center;
             }
@@ -87,10 +87,8 @@
         </style>
     </head>
     <body>
-        <form class="box">
-        
+        <form class="loginForm">
                 <h2>Đăng Nhập</h2>
-            
                 <p>Tài Khoản</p>
                 <input type="text" placeholder="Nhập thông tin tài khoản" required>
             

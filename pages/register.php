@@ -7,7 +7,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-        <style>
+        <script defer src="../scripts/checkValidInput.js"></script>
+        <style> 
             body{
                 font-family: "Roboto Mono", "san-serif", "Arial";
                 display: flex;
@@ -22,7 +23,7 @@
                 padding-left:28px;
             }
             
-            .box
+            .registerForm
             {
                 background-color: rgb(29,29,29);
                 width:600px;
@@ -31,11 +32,11 @@
                 border-radius:30px;
                 box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
             }
-            .box div
+            .registerForm div
             {
                 margin-top:30px;
             }
-            .box h2
+            .registerForm h2
             {
                 text-align: center;
             }
@@ -80,21 +81,20 @@
         </style>
     </head>
     <body>
-        <div class="box">
+        <form class="registerForm" id="registerForm" action="../actions/checkValidInput.php" method="POST">
                 <h2>Đăng ký</h2>
-            
                 <p>Tài Khoản</p>
-                <input type="text" placeholder="Nhập thông tin tài khoản">
+                <input type="text" id="username" name="username" placeholder="Nhập thông tin tài khoản" required minlength="6" maxlength="20">
             
                 <p>Mật Khẩu</p>
-                <input type="password" placeholder="Nhập mật khẩu">
+                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required minlength="6" maxlength="20">
 
                 <p>Xác nhận mật khẩu</p>
-                <input type="password" placeholder="Xác nhận mật khẩu">
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Xác nhận mật khẩu" required>
 
                 <div>
-                    <button class="registerBtn">Đăng ký</button>
+                    <button type="submit" class="registerBtn">Đăng ký</button>
                 </div>
-        </div>
+        </form>
     </body>
 </html>
