@@ -1,0 +1,161 @@
+/* General styling */
+body
+{
+    font-family: "Roboto Mono", "san-serif", "Arial";
+}
+
+/* Top navbar styling */
+.navBar
+{
+    background-color: rgb(26,26,26);
+    color:white;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90px;
+}
+.navBar > div
+{
+    margin: 20px 20px 20px 20px;
+}
+.navBar a
+{
+    text-decoration: none;
+    font-size: 50px;
+    color:white;
+}
+.navBar p
+{
+    margin: 5px 0 0 0;
+}
+.navBar div > img
+{
+    height:54px;
+    width:50px;
+    border-radius:50%;
+    padding-top:10px;
+    padding-left: 20px;
+    padding-right:20px;
+}
+
+.navBar input[type = "text"]
+{
+    font-size: 20px;
+    width: 100%;
+    height: auto;
+    margin-left:60px;
+    border:none;
+    border-radius:9px 0 0 9px;
+    padding-left: 10px;
+}
+@media (max-width: 599px) {
+    .navBar input[type = "text"],.searchIcon {
+        display: none;
+    }
+}
+
+.navBar button
+{
+    background: none;
+    border:none;
+    margin-right:20px;
+}
+.navBar button:hover
+{
+    cursor: pointer;
+}
+.navBar button > img
+{
+    height:100%;
+    width:130%;
+    object-fit: fill;
+}
+
+h1
+{
+    padding-left:20px;
+}
+
+/* Menu View*/
+.menu
+{
+    display: flex;
+    flex-direction: row;
+    padding-left: 30px;
+}
+h3
+{
+    color:#4E4E4E;
+    font-size:40px;
+}
+.menu div > h1
+{
+    margin-left:3ch;
+}
+.left
+{
+    display:flex;
+    flex-direction: column;
+    font-size: 20px;
+    width:20%;
+}
+.left div > p
+{
+    display:inline-block;
+    margin: 5px 0 5px 0;
+}
+.left img
+{
+    width: 100%;      
+    height: auto;
+    border-radius: 8px;
+    aspect-ratio: 2 / 3; 
+    object-fit: fill;
+    padding-bottom:20px;
+}
+span{
+    color:#4E4E4E;
+}
+.detail
+{
+    padding-left:50px;
+    width:50%;
+}
+.detail h3
+{
+    font-size:25px;
+}
+.detail span
+{
+    font-size:20px;
+    display:block;
+    text-align: justify;
+}
+
+/*Chapter list*/
+.listContainer
+{
+    overflow-y: auto;
+    height:550px;
+}
+
+.list li
+{
+    list-style-type: none;
+    padding-left: 20px;
+    padding-top: 7px;
+    font-size:19px;
+}
+.list li > a
+{
+    font-size:19px;
+    overflow-wrap: break-word;
+    text-decoration: none;
+    color:#4E4E4E;
+}
+
+.list > li:hover
+{
+    text-decoration: underline;
+}
