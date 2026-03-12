@@ -70,7 +70,7 @@
             .registerBtn
             {
                 margin-top:20px;
-                background-color: grey;
+                background-color: rgb(123, 150, 255);
             }
             .loginBtn:hover, .registerBtn:hover
             {
@@ -82,11 +82,30 @@
             }
             .registerBtn:active
             {
-                filter:brightness(120%);
+                filter:brightness(80%);
+            }
+            .success-message {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #4CAF50;
+                color: white;
+                padding: 12px 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.2);
             }
         </style>
     </head>
     <body>
+        <?php
+        session_start();//gọi session để lấy biến session 
+        if (isset($_SESSION["success"])) 
+        {
+           echo "<div class='success-message'>" . $_SESSION["success"] . "</div>";
+           unset($_SESSION["success"]);
+        }
+        ?>
+
         <form class="loginForm">
                 <h2>Đăng Nhập</h2>
                 <p>Tài Khoản</p>

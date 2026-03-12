@@ -1,11 +1,11 @@
 <?php
 require_once "connect.php";
+session_start(); //gọi session để lưu biến session sau này
 
 $username = trim($_POST["username"] ?? "");
 $password = trim($_POST["password"] ?? "");
 $confirmPassword = trim($_POST["confirmPassword"] ?? "");
 
-var_dump($username, $password, $confirmPassword);
 /*check valid lại lần nữa*/
 $usernameRegex = "/^[a-zA-Z0-9_.]+$/";
 $passwordRegex = "/^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':\"\\\\|,.<>\/?`~]+$/";
@@ -54,6 +54,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("ss", $username, $hashedPassword);
 
 if ($stmt->execute()) {
+    $_SESSION["success"] = "Đăng ký thành công! Vui lòng đăng nhập.";
     header("Location: ../pages/login.php");
     exit();
 } else {
