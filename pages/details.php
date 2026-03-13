@@ -72,7 +72,7 @@
                     </span>
                     
                 </div>
-                <div style="width:30%; color:#4E4E4E; box-shadow: 0 0 0 0.2px #000;border-radius: 30px; margin-left:30px; margin-top:30px;  ">
+                <div style="width:30%; height: 550px; color:#4E4E4E; box-shadow: 0 0 0 0.2px #000;border-radius: 30px; margin-left:30px; margin-top:30px; margin-right:5px;">
                     <h1 style="padding-left:0">Danh sách chương</h1>
                     <div class="list">
                         <ul class="listContainer">
