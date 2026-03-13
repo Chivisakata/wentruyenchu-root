@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 11, 2026 at 03:38 PM
+-- Generation Time: Mar 13, 2026 at 01:20 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -105,10 +105,10 @@ INSERT INTO `truyen` (`Id_truyen`, `Ten`, `TacGia`, `TheLoai`, `TongSoChuong`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `user` (
+CREATE TABLE `users` (
   `Id_user` int(11) NOT NULL,
   `User_name` varchar(255) DEFAULT NULL,
   `Pass_word` varchar(255) DEFAULT NULL,
@@ -116,6 +116,22 @@ CREATE TABLE `user` (
   `NgayDangKy` datetime DEFAULT NULL,
   `Avatar` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`Id_user`, `User_name`, `Pass_word`, `Email`, `NgayDangKy`, `Avatar`) VALUES
+(1, 'chivisakata', '$2y$10$Mwj5PLYPC4P0RRNFufPYW.Zr8EXUpcOq9LlJSEDS8FgMY/ktO7XNy', NULL, NULL, 'mewing.jpg'),
+(2, 'nhuquynhvo', '$2y$10$Za7hHiX1cHaZ/PVnPqDUB.X/qDofmOQ2gNHRENgTAnsaoQp/992eq', NULL, NULL, NULL),
+(3, 'caochivi1', '$2y$10$5JPeDz0/L9ncHDq7y7vkX.urWPpd95OiuKtRms3AbnRoGaJ.DIiju', NULL, NULL, NULL),
+(4, 'caochivi2', '$2y$10$w9wRzQSV5yVvOxGMeYPguuoEzCbvQC5aMUx.oCucVr31bZqGmTvZy', NULL, NULL, NULL),
+(5, 'caochivi3', '$2y$10$ES1q2Tj864rQshZ9H18o7e0Jkaru6g8P7buK7u4xfWqD.LKqBeshC', NULL, NULL, NULL),
+(6, 'caochivi4', '$2y$10$E8ZV1ieZFjnIdXvzl/nLW.Dq7187M0BKOqWNqFAv/Aoi1VwJG.riS', NULL, NULL, NULL),
+(7, 'caochivi5', '$2y$10$XePG5LM9ujqzMJ3glYwi4.W50BX7KydfxD/kaUT3RBUyFGm2EQQnS', NULL, NULL, NULL),
+(8, 'caochivi6', '$2y$10$NI9kZv414n39xYdtX0ohcOEKaxMgzS8CldQOyTOZqtLfczHde./Nm', NULL, NULL, NULL),
+(9, 'caochivi44', '$2y$10$soSljOc0UNo4SWO6i40BNeVvX.ctKzcHqz4vAcERW5LjD4PcJt3lm', NULL, NULL, NULL),
+(10, 'caochivi100', '$2y$10$J8kAYaa2afKkqU5k8BtEkeqfPlLWtVd1hqnXlqVw7WBjx6iMzEX5m', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -162,9 +178,9 @@ ALTER TABLE `truyen`
   ADD PRIMARY KEY (`Id_truyen`);
 
 --
--- Indexes for table `user`
+-- Indexes for table `users`
 --
-ALTER TABLE `user`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`Id_user`);
 
 --
@@ -203,10 +219,10 @@ ALTER TABLE `truyen`
   MODIFY `Id_truyen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT for table `users`
 --
-ALTER TABLE `user`
-  MODIFY `Id_user` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `users`
+  MODIFY `Id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables
@@ -222,21 +238,21 @@ ALTER TABLE `chuong`
 -- Constraints for table `comment`
 --
 ALTER TABLE `comment`
-  ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`Id_user`) REFERENCES `user` (`Id_user`) ON DELETE CASCADE,
+  ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`Id_user`) REFERENCES `users` (`Id_user`) ON DELETE CASCADE,
   ADD CONSTRAINT `comment_ibfk_2` FOREIGN KEY (`Id_truyen`) REFERENCES `truyen` (`Id_truyen`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `rating`
 --
 ALTER TABLE `rating`
-  ADD CONSTRAINT `rating_ibfk_1` FOREIGN KEY (`Id_user`) REFERENCES `user` (`Id_user`) ON DELETE CASCADE,
+  ADD CONSTRAINT `rating_ibfk_1` FOREIGN KEY (`Id_user`) REFERENCES `users` (`Id_user`) ON DELETE CASCADE,
   ADD CONSTRAINT `rating_ibfk_2` FOREIGN KEY (`Id_truyen`) REFERENCES `truyen` (`Id_truyen`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `yeuthich`
 --
 ALTER TABLE `yeuthich`
-  ADD CONSTRAINT `yeuthich_ibfk_1` FOREIGN KEY (`Id_user`) REFERENCES `user` (`Id_user`) ON DELETE CASCADE,
+  ADD CONSTRAINT `yeuthich_ibfk_1` FOREIGN KEY (`Id_user`) REFERENCES `users` (`Id_user`) ON DELETE CASCADE,
   ADD CONSTRAINT `yeuthich_ibfk_2` FOREIGN KEY (`Id_truyen`) REFERENCES `truyen` (`Id_truyen`) ON DELETE CASCADE;
 COMMIT;
 
