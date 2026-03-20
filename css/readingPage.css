@@ -1,0 +1,94 @@
+/* General styling*/
+body
+{
+    font-family: "Roboto Mono", sans-serif;
+    height:1200px;
+}
+
+button:hover
+{
+    filter: brightness(85%);
+    cursor: pointer;
+}
+
+/* Top styling*/
+.top
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Change background buttons*/
+.bgChange, .fontChange
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:rgb(173, 173, 173);
+    border:none;
+    border-radius: 10px;
+}
+
+.bgChange button, .fontChange button
+{
+    font-size:20px;
+    width:100px;
+    height:50px;
+    margin:5px;
+    border:none;
+    border-radius:10px;
+}
+.fontChange button
+{
+    width:120px;
+}
+
+/* Novel Info and Navigate button*/
+.btnGroupAndInfo
+{
+    width:50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+span
+{
+    font-size:32px;
+    font-weight: bold;
+}
+.btnGroup button, .btnGroup select
+{
+    width:170px;
+    height:50px;
+    font-size:25px;
+    margin:10px;
+    border:none;
+    border-radius:10px;
+    margin-top:25px;
+}
+.btnGroup select
+{
+    width:150px;
+    border:1px solid black;
+}
+
+/* Reading area */
+.page
+{
+    width:90%;
+    margin:50px;
+    padding-left:30px;
+    font-size: 21px;
+}
+
+/* Bottom */
+.bottom
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:50px;
+}
