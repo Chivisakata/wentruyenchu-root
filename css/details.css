@@ -142,14 +142,14 @@ span{
     height:550px;
 }
 
-.list li
+.listContainer li
 {
     list-style-type: none;
     padding-left: 20px;
     padding-top: 7px;
     font-size:19px;
 }
-.list li > a
+.listContainer li > a
 {
     font-size:19px;
     overflow-wrap: break-word;
@@ -157,7 +157,7 @@ span{
     color:#4E4E4E;
 }
 
-.list > li:hover
+.listContainer > li:hover
 {
     text-decoration: underline;
 }

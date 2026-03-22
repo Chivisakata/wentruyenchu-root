@@ -26,21 +26,21 @@
 <hr>
             <div class="menu">
                 <?php
-                            include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
-                            $result = mysqli_query($conn, "SELECT * FROM truyen WHERE Id_truyen = " . $_GET['id']);
-                            $row = mysqli_fetch_assoc($result);
-                            if($row) {
-                                $TenTruyen = $row['Ten'];
-                                $TacGia = $row['TacGia'];
-                                $TheLoai = $row['TheLoai'];
-                                $TrangThai = $row['TrangThai'];
-                                $AnhBia = $row['AnhBia'];
-                                $TongSoChuong = $row['TongSoChuong'];
-                                $GioiThieu = $row['GioiThieu'];
-                            }
-                            else {
-                                die("Không tìm thấy truyện");
-                            }
+                    include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
+                    $result = mysqli_query($conn, "SELECT * FROM truyen WHERE Id_truyen = " . $_GET['id']);
+                    $row = mysqli_fetch_assoc($result);
+                    if($row) {
+                        $TenTruyen = $row['Ten'];
+                        $TacGia = $row['TacGia'];
+                        $TheLoai = $row['TheLoai'];
+                        $TrangThai = $row['TrangThai'];
+                        $AnhBia = $row['AnhBia'];
+                        $TongSoChuong = $row['TongSoChuong'];   
+                        $GioiThieu = $row['GioiThieu'];
+                    }
+                    else {
+                        die("Không tìm thấy truyện");
+                    }
                 ?>
                 <div class="left">
                     <div style="text-align: center;">
@@ -80,7 +80,9 @@
                             $chuong = mysqli_query($conn, "SELECT * FROM chuong WHERE Id_truyen = " . $_GET['id']);
                             while($row = mysqli_fetch_assoc($chuong)) {
                             ?> 
-                                   <li><?php echo $row['TenChuong']; ?></li>
+                                   <li> 
+                                        <a href="readingPage.php?id_chuong=<?php echo $row['Id_chuong'];?>&id_truyen=<?php echo $_GET['id']; ?>"><?php echo $row['TenChuong']; ?></a>
+                                    </li>
                             <?php
                             }
                             ?>
@@ -91,6 +93,9 @@
             </div>
             
         </div>
-
+        <br>
+        <br>
+        <br>
+        <?php include "../components/footer.php";?>
     </body>
 </html>
