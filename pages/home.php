@@ -13,6 +13,16 @@
     <body>
         <?php
         session_start();// Bắt đầu session để truy cập biến session
+        
+                if (isset($_SESSION["success"])) 
+                {
+                   echo "<div class='success-message'>" . $_SESSION["success"] . "</div>";
+                   unset($_SESSION["success"]);
+                }
+        ?>
+                <script src="../scripts/killPopupNotification.js"></script>
+
+        <?php
         if(isset($_SESSION['User_name'])) {
             $username = $_SESSION['User_name'];
             $avatar = $_SESSION['Avatar'];

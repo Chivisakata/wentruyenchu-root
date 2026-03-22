@@ -46,9 +46,10 @@ if ($result->num_rows > 0) {
 }
 /* hash password */
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+/*set role
 
 /* insert database */
-$sql = "INSERT INTO Users (User_name, Pass_word) VALUES (?, ?)";
+$sql = "INSERT INTO Users (User_name, Pass_word,NgayDangKy) VALUES (?, ?)";
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("ss", $username, $hashedPassword);

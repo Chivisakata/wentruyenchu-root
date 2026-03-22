@@ -105,6 +105,7 @@
            unset($_SESSION["success"]);
         }
         ?>
+        <script src="../scripts/killPopupNotification.js"></script>
 
         <form class="loginForm" name="loginForm" action="../actions/loginProcess.php" method="POST">
                 <h2>Đăng Nhập</h2>

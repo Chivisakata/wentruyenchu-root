@@ -5,8 +5,7 @@ $username = trim($_POST["username"] ?? "");
 $password = trim($_POST["password"] ?? "");
 
 /*check valid lại lần nữa*/
-var_dump($username);
-var_dump($password);
+
 
 // Chuẩn bị câu lệnh SQL
 $sql = "SELECT * FROM users WHERE User_name = ?";
@@ -27,11 +26,19 @@ if (!$user) {
 // Kiểm tra user tồn tại và mật khẩu đúng
 if ($user && password_verify($password, $user['Pass_word'])) {
 
-    // Tạo session
+    // Tạo session cho user
     $_SESSION['User_id'] = $user['Id_user'];
     $_SESSION['User_name'] = $user['User_name'];
     $_SESSION['Avatar'] = $user['Avatar'];
-    
+    $_SESSION['Role'] = $user['Role'];
+
+    // Tạo session đăng nhập thành công
+    $_SESSION["success"] = "Đăng nhập thành công!";
+
+    //Chuyển sang trang Admin
+    if($user['Role'] == "admin")
+        header("Location: ../pages/admin.php");
+    exit();
 
     // Chuyển về trang chủ
     header("Location: ../pages/home.php");
