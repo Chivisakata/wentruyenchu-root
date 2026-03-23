@@ -13,17 +13,19 @@
     <body>
         <?php
         session_start();// Bắt đầu session để truy cập biến session
-        
-                if (isset($_SESSION["success"])) 
-                {
-                   echo "<div class='success-message'>" . $_SESSION["success"] . "</div>";
-                   unset($_SESSION["success"]);
-                }
+        //kiểm tra session đăng nhập
+        if (isset($_SESSION["success"])) 
+        {
+            echo "<div class='success-message'>" . $_SESSION["success"] . "</div>";
+            unset($_SESSION["success"]);
+        }
         ?>
                 <script src="../scripts/killPopupNotification.js"></script>
 
         <?php
+        //kiểm tra session của user
         if(isset($_SESSION['User_name'])) {
+            $userid = $_SESSION['User_id'];
             $username = $_SESSION['User_name'];
             $avatar = $_SESSION['Avatar'];
         }
@@ -47,13 +49,28 @@
                     <button class="searchIcon"><img src="../images/search-icon.png"></button>
                 </div>
                 
-                
-                <button id="loginBtn">Đăng nhập</button>
-                <script>
-                    document.getElementById("loginBtn").onclick = function () {
-                    window.location.href = "login.php";
-                };
-                </script>
+                <div class="login-logout-btn">
+                    <?php if (!isset($_SESSION['User_id'])):?>
+                        <button id="loginBtn">Đăng nhập</button>
+                        <script>
+                            document.getElementById("loginBtn").onclick = function () {
+                            window.location.href = "login.php";
+                        };
+                        </script>
+                    <?php else: ?>
+                        <button id="logoutBtn">Đăng xuất</button>
+                        <script>
+                            //hủy mọi session
+                            document.getElementById("logoutBtn").onclick = function () { 
+                            fetch("../actions/logoutProcess.php", {
+                            method: "POST"})
+                            .then(()=>{
+                                location.reload();
+                            })
+                        };
+                        </script>
+                    <?php endif; ?>
+                </div>
                     
             </div>
             

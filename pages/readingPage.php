@@ -21,6 +21,7 @@
                 document.body.style.fontFamily = name;
             }
         </script>
+        <script src="../scripts/chapterSwitcher.js" defer></script>
     </head>
     <body>
         <?php
@@ -65,9 +66,10 @@
                     <span><?php echo $TenChuong; ?></span>
                 </div>
                 <div class="btnGroup">       <!--Nav bar-->
-                    <button>Trang Trước</button>
+                    
+                    <button class="previous-btn" data-min="1">Trang Trước</button>
                     <?php include "../components/dropdown_chuong.php";?>
-                    <button>Trang Sau</button>
+                    <button class="next-btn"  data-max=<?php echo $count;?>>Trang Sau</button>
                 </div>
             </div>
         </div>
@@ -80,9 +82,9 @@
         <hr>
         <div class="bottom">
             <div class="btnGroup">       <!--Nav bar-->
-                    <button>Trang Trước</button>
+                    <button class="previous-btn" data-min="1">Trang Trước</button>
                     <?php include "../components/dropdown_chuong.php";?>
-                    <button>Trang Sau</button>
+                    <button class="next-btn" data-max=<?php echo $count;?>>Trang Sau</button>
                 </div>
         </div>
         <?php include "../components/footer.php";?>
