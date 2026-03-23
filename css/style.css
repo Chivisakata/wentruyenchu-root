@@ -78,6 +78,7 @@ body
     color:white;
     width:90px;
     height:50px;
+    margin: 0;
 }
 #loginBtn:hover
 {
@@ -87,6 +88,26 @@ body
 #loginBtn:active
 {
     background-color: rgba(189, 189, 189, 0.2);
+}
+#logoutBtn
+{
+    color:white;
+    width:90px;
+    height:50px;
+}
+#logoutBtn:hover
+{
+    border: 3px solid #ffff;
+    border-radius:5px;
+}
+#logoutBtn:active
+{
+    background-color: rgba(189, 189, 189, 0.2);
+}
+.login-logout-btn
+{
+    display: flex;
+    flex-direction: row;
 }
 
 

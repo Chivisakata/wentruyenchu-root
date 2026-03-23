@@ -98,6 +98,26 @@ tr td > div
     overflow:hidden;
 }
 
+#addstoryBtn
+{
+    background-color: rgb(54, 133, 237);
+    color:white;
+    width:90px;
+    height:50px;
+    margin: 0;
+    margin-left: 95%;
+    border-radius: 10px;
+    border: none;
+}
+#addstoryBtn:hover
+{
+    border: 1px solid #000000;
+}
+#addstoryBtn:active
+{
+    background-color: rgb(85, 150, 234);
+}
+
 
 @media (max-width: 600px) {
   table, thead, tbody, th, td, tr {

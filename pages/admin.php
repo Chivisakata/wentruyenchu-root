@@ -27,12 +27,10 @@
         <div style="display:flex; flex-direction: row;">
             <div class="leftMenu">
                 <div class="btnGroup">
-                    <button>Chuong</button>
-                    <button>Comment</button>
-                    <button>Rating</button>
                     <button>Truyen</button>
+                    <button>Chuong</button>
+                    <button>Rating</button>
                     <button>Users</button>
-                    <button>Yeu Thich</button>
                 </div>
             </div>
             <div class="main">
@@ -47,7 +45,7 @@
                         <th>GioiThieu</th>
                         <th>NgayTao</th>
                         <th>AnhBia</th>
-                        <th></th>
+                        <th><button id="addstoryBtn">Thêm truyện</button></th>
                         <th></th>
                     </thead>
                     <tbody>
