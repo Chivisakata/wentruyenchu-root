@@ -37,13 +37,29 @@
                 exit();
             }
         ?>
-        
-        <div class="top">
-            <div class="bgChange">       <!--Change background button-->
-                <button onclick="changeBGColor('Black', 'White')">Black</button>
-                <button onclick="changeBGColor('White', 'Black')">White</button>
-                <button onclick="changeBGColor('Beige', 'Black')">Beige</button>
+        <details class="fab-menu">
+            <summary class="fab-button">
+                <span><img src="../images/settingIcon.jpg"></span>
+            </summary>
+            <div class="fab-box">
+                <div class="box-top">
+                    <button onclick="changeBGColor('Black', 'White')">Black</button>
+                    <button onclick="changeBGColor('White', 'Black')">White</button>
+                    <button onclick="changeBGColor('Beige', 'Black')">Beige</button>
+                </div>
+                <hr>
+                <div class="box-bottom">
+                    <button onclick="changeFont('Roboto Mono')">Roboto Mono</button>
+                    <button onclick="changeFont('Serif')">Serif</button>
+                    <button onclick="changeFont('sans-serif')">Sans Serif</button>
+                    <button onclick="changeFont('Source Sans Pro')">Source Sans Pro</button>
+                    <button onclick="changeFont('Monospace')">Monospace</button>
+                </div>
             </div>
+        </details>
+        <div class="fab-overlay" onclick="this.previousElementSibling.removeAttribute('open')"></div>
+
+        <div class="top">
             <div class="btnGroupAndInfo">        <!--Navigate bar-->
                 <div>       <!--Name, info of novel-->
                     <span><?php echo $TenChuong; ?></span>
@@ -53,14 +69,6 @@
                     <?php include "../components/dropdown_chuong.php";?>
                     <button>Trang Sau</button>
                 </div>
-            </div>
-
-            <div class="fontChange">       <!--Change font-->
-                <button onclick="changeFont('Roboto Mono')">Roboto Mono</button>
-                <button onclick="changeFont('Serif')">Serif</button>
-                <button onclick="changeFont('sans-serif')">Sans Serif</button>
-                <button onclick="changeFont('Source Sans Pro')">Source Sans Pro</button>
-                <button onclick="changeFont('Monospace')">Monospace</button>
             </div>
         </div>
         <hr>

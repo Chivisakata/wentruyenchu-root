@@ -2,7 +2,6 @@
 body
 {
     font-family: "Roboto Mono", sans-serif;
-    height:1200px;
     margin: 0;
     padding: 0;
 }
@@ -14,42 +13,18 @@ button:hover
 }
 
 /* Top styling*/
-.top
+.top, .bottom
 {
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-
-/* Change background buttons*/
-.bgChange, .fontChange
-{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    background-color:rgb(173, 173, 173);
-    border:none;
-    border-radius: 10px;
-}
-
-.bgChange button, .fontChange button
-{
-    font-size:20px;
-    width:100px;
-    height:50px;
-    margin:5px;
-    border:none;
-    border-radius:10px;
-}
-.fontChange button
-{
-    width:120px;
+    align-items: center;
+    padding-bottom:50px;
 }
 
 /* Novel Info and Navigate button*/
 .btnGroupAndInfo
 {
-    width:50%;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -91,12 +66,93 @@ span
     font-size: 21px;
 }
 
-/* Bottom */
-.bottom
+/* Setting Icon */
+
+
+.fab-menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+}
+
+/* The main Floating Button */
+.fab-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.fab-button img
 {
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+}
+
+/* The Box with 2 Divs */
+.fab-box {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 250px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  overflow: hidden; /* Keeps the inner divs inside the rounded corners */
+  border: 1px solid #eee;
+}
+
+/* Styling the 2 internal divs */
+.box-top {
+    background-color: #1a334d;
     display:flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-bottom:50px;
+    padding:15px;
+    gap:15px;
+  
+}
+.box-top button
+{
+    font-size:17px;
+    border-radius:10px;
+    padding:7px;
+}
+
+.box-bottom {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.box-bottom button {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.box-bottom button:hover {
+  background: #f0f0f0;
+}
+
+/* The click-away overlay */
+.fab-menu[open] + .fab-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
 }

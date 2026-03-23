@@ -27,6 +27,11 @@ body
     font-size: 50px;
     color:white;
 }
+.navBar div a > img
+{
+    width:56px;
+    height:56px;
+}
 .navBar p
 {
     margin: 5px 0 0 0;
@@ -161,3 +166,124 @@ span{
 {
     text-decoration: underline;
 }
+
+/* Botom Buttons */
+.bottomBtn
+{
+    display:flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+.saveBtn
+{
+    width:100%;
+    height: 40px;
+    font-size:20px;
+    border:none;
+    border-radius:30px;
+    background-color: rgb(66,117,59);
+    color:white;
+}
+.saveBtn:hover
+{
+    cursor: pointer;
+}
+.saveBtn:active
+{
+    filter:brightness(75%);
+}
+
+/* Rating */
+.rating {
+  display: flex;
+  flex-direction: row-reverse; /* This flips the 5-1 order back to 1-5 visually */
+  justify-content: flex-end;
+}
+
+.rating input {
+  display: none; /* Hides the ugly radio circles */
+}
+
+.rating label {
+  font-size: 30px;
+  color: #ccc; /* Default grey color for empty stars */
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Highlight stars when hovered or checked */
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+  color: #ffca08; /* Gold color */
+}
+
+
+
+/* Comment Section */
+.comment
+{
+    width:1300px;
+    margin-left:60px;
+    margin-top:50px;
+}
+
+.comment img
+{
+    width:56px;
+    height:56px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.userComment
+{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+}
+
+textarea
+{
+    resize:none;
+    width:90%;
+    height:110px;
+    margin-left:20px;
+    margin-top:-5px;
+    border-radius:10px;
+    border:2px solid grey;
+    font-size:18px;
+    padding-left:13px;
+}
+.commentsSection
+{
+    padding-top:100px;
+    gap:10px;
+    display:flex;
+    flex-direction: column;
+}
+.commentsSection > div
+{
+    display:flex;
+    align-items: center;
+    gap:15px;
+}
+.commentsSection p
+{
+    font-size:17px;
+    padding-left:20px;
+    padding-bottom:30px;
+}
+.userComment button
+{
+    margin-left: 30px;
+    width:100px;
+    height:45px;
+    border:none;
+    border-radius:25px;
+    background-color: rgb(66,117,59);
+    color:white;
+    font-weight: bold;
+}
+

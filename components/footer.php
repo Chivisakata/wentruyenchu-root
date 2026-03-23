@@ -44,6 +44,6 @@
                 <P>Can Tho University Of Technology</P>
                 <P>Address: Cai Khe, Ninh Kieu, Can Tho</P>
                 <P>About us:</P>
-                <span>This is a duo project where we make a website to read novel. Please contact us if you encounter any problem using the website. Enjoy.</span>
+                <span style="font-size:20px; font-weight:normal; color:grey;">This is a duo project where we make a website to read novels. Please contact us if you encounter any problems using the website. Enjoy.</span>
             </div>
         </div>

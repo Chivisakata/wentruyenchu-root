@@ -8,13 +8,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
     <body>
         <div>
             <!--TOP-->
             <div class="navBar">
             <div>
-                <a href="home.php">HOME</a>
+                <a href="home.php"><img src="../images/homeIcon.png" style="width:56px; height:56px;"></a>
             </div>
             <div style="display: flex; flex-direction: row; width:60%;">
                 <input type="text" placeholder="Nhập tên truyện muốn tìm...">
@@ -24,7 +25,7 @@
             <!--MENU-->
             <h1>THÔNG TIN TRUYỆN</h1>
 <hr>
-            <div class="menu">
+            <div class="menu" style="width:1200px; margin-left:100px;">
                 <?php
                     include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
                     $result = mysqli_query($conn, "SELECT * FROM truyen WHERE Id_truyen = " . $_GET['id']);
@@ -60,6 +61,20 @@
                         <b>Trạng thái:</b>
                         <span style="color:#428BCA;"><?php echo isset($TrangThai) ? $TrangThai : ''; ?></span>
                     </div>
+                    <div class="bottomBtn">
+                        <div>
+                            <button class="saveBtn">Lưu</button>
+                        </div>
+                        <p>Rating:</p>
+                        <div class="rating">
+                            <input type="radio" name="star" id="star5"><label for="star5" class="fa-solid fa-star"></label>
+                            <input type="radio" name="star" id="star4"><label for="star4" class="fa-solid fa-star"></label>
+                            <input type="radio" name="star" id="star3"><label for="star3" class="fa-solid fa-star"></label>
+                            <input type="radio" name="star" id="star2"><label for="star2" class="fa-solid fa-star"></label>
+                            <input type="radio" name="star" id="star1"><label for="star1" class="fa-solid fa-star"></label>
+                        </div>
+                        <p>4/5 (12 danh gia)</p>
+                    </div>
                 </div>
                 <div class="detail">
                     <br>
@@ -91,11 +106,51 @@
                     </div>
                 </div>
             </div>
-            
+<hr>
+            <div class="comment">
+                <h3>COMMENTS:</h3>
+                <div class=userComment>
+                    <a><img src="../images/placeholder.jpg"></a>
+                    <textarea></textarea>
+                    <button>Đăng</button>
+                </div>
+                <div class="commentsSection">
+                    <div>
+                        <div>
+                            <a><img src="../images/placeholder.jpg"></a>
+                            <b>USER123</b>
+                        </div>
+                        <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>
+                    </div>
+                    <div>
+                        <div>
+                            <a><img src="../images/placeholder.jpg"></a>
+                            <b>USER123</b>
+                        </div>
+                        <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>
+                    </div>
+                    <div>
+                        <div>
+                            <a><img src="../images/placeholder.jpg"></a>
+                            <b>USER123</b>
+                        </div>
+                        <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>
+                    </div>
+                    <div>
+                        <div>
+                            <a><img src="../images/placeholder.jpg"></a>
+                            <b>USER123</b>
+                        </div>
+                        <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>
+                    </div>
+                    
+                </div>
+            </div>
         </div>
         <br>
         <br>
         <br>
         <?php include "../components/footer.php";?>
+
     </body>
 </html>

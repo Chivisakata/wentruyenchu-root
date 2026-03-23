@@ -1,3 +1,10 @@
+<style>
+option
+{
+    font-size:18px;
+}
+
+</style>
 <select onchange="window.location.search='?id_truyen=<?=$_GET['id_truyen']?>&id_chuong=' + this.value">
 <option value="">Chương</option>
 <?php

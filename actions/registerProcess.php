@@ -49,7 +49,7 @@ $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 /*set role
 
 /* insert database */
-$sql = "INSERT INTO Users (User_name, Pass_word,NgayDangKy) VALUES (?, ?)";
+$sql = "INSERT INTO Users (User_name, Pass_word) VALUES (?, ?)";
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("ss", $username, $hashedPassword);

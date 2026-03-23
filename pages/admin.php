@@ -19,7 +19,6 @@
         exit();
         }
         ?>
-
         
         <div class="topBar">    <!--LOGO stand for HOME-->
             <a href="home.php"><img src="../images/homeIcon.png"></a>      
@@ -29,10 +28,8 @@
                 <div class="btnGroup">
                     <button>Chuong</button>
                     <button>Comment</button>
-                    <button>Rating</button>
                     <button>Truyen</button>
                     <button>Users</button>
-                    <button>Yeu Thich</button>
                 </div>
             </div>
             <div class="main">
