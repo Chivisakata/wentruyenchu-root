@@ -37,11 +37,13 @@ if ($user && password_verify($password, $user['Pass_word'])) {
 
     //Chuyển sang trang Admin
     if($user['Role'] == "admin")
-        header("Location: ../pages/admin.php");
-    exit();
+        {
+            header("Location: ../pages/admin.php");
+            exit();
+        }
 
     // Chuyển về trang chủ
-    header("Location: ../pages/home.php");
+    header("Location: ../pages/home.php");  
     exit();
 
 } else {
