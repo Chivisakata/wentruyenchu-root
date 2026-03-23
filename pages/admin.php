@@ -45,65 +45,38 @@
                         <th>GioiThieu</th>
                         <th>NgayTao</th>
                         <th>AnhBia</th>
-                        <th><button id="addstoryBtn">Thêm truyện</button></th>
+                        <th>
+                            <button id="addstoryBtn">Thêm truyện</button>
+                            <script>
+                            document.getElementById("addstoryBtn").onclick = function () {
+                            window.location.href = "editing.php";
+                            };
+                            </script>
+                        </th>
                         <th></th>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td style="text-align: center;">1</td>
-                            <td><div>Kiếm Lai</div></td>
-                            <td><div>Phong Hỏa Hí Chư Hầu</div></td>
-                            <td><div>Huyền Huyễn, Tiên Hiệp, Kiếm Hiệp</div></td>
-                            <td>NULL</td>
-                            <td>Đang ra</td>
-                            <td><div>Thiên địa mênh mông, vạn vật tồn tại. Ta - Trần Bình An - chỉ với một kiếm, phá thành, chắn sông, hái sao, lấp biển, hàng yêu, diệt ma, phong thần, khai thiên, làm nên tất cả! </div></td>
-                            <td>2026-03-11 20:33:07</td>
-                            <td><div>kiemlai.jpg</div></td>
-                            <td><a href="#">Edit</a></td>
-                            <td><a href="#">Delete</a></td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: center;">2</td>
-                            <td><div>Mao Sơn Tróc Quỷ Nhân</div></td>
-                            <td><div>Thanh Tử</div></td>
-                            <td><div>Linh Dị, Đô Thị, Huyền Huyễn</div></td>
-                            <td>3665</td>
-                            <td>Hoàn Thành</td>
-                            <td><div>Diệp Thiếu Dương vốn là một Mao Sơn tróc quỷ nhân, dũng cảm tiến vào đô thị, gặp người đấu người, gặp quỷ đấu quỷ, gặp yêu đấu yêu, gặp hồ đấu hồ...<br><br>Tương tây Thi vương, Tà Thần bất tử, điệp tiên hung linh, tứ phương quỷ khấu.<br><br>Nữ minh tinh nuôi tiểu quỷ, công chúa hoàng thất hút máu, nữ giám đốc là hồ yêu,...<br><br>Thi triển Mao Sơn thần thuật, đánh lui tất cả!
-                                </div></td>
-                            <td>2026-03-11 20:36:58</td>
-                            <td><div>maosontrocquynhan.jpg</div></td>
-                            <td><a href="#">Edit</a></td>
-                            <td><a href="#">Delete</a></td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: center;">1</td>
-                            <td><div>Mao Sơn Tróc Quỷ Nhân</div></td>
-                            <td><div>Thanh Tử</div></td>
-                            <td><div>Linh Dị, Đô Thị, Huyền Huyễn</div></td>
-                            <td>3665</td>
-                            <td>Hoàn Thành</td>
-                            <td><div>Diệp Thiếu Dương vốn là một Mao Sơn tróc quỷ nhân, dũng cảm tiến vào đô thị, gặp người đấu người, gặp quỷ đấu quỷ, gặp yêu đấu yêu, gặp hồ đấu hồ...<br><br>Tương tây Thi vương, Tà Thần bất tử, điệp tiên hung linh, tứ phương quỷ khấu.<br><br>Nữ minh tinh nuôi tiểu quỷ, công chúa hoàng thất hút máu, nữ giám đốc là hồ yêu,...<br><br>Thi triển Mao Sơn thần thuật, đánh lui tất cả!
-                                </div></td>
-                            <td>2026-03-11 20:36:58</td>
-                            <td><div>maosontrocquynhan.jpg</div></td>
-                            <td><a href="#">Edit</a></td>
-                            <td><a href="#">Delete</a></td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: center;">1</td>
-                            <td><div>Mao Sơn Tróc Quỷ Nhân</div></td>
-                            <td><div>Thanh Tử</div></td>
-                            <td><div>Linh Dị, Đô Thị, Huyền Huyễn</div></td>
-                            <td>3665</td>
-                            <td>Hoàn Thành</td>
-                            <td><div>Diệp Thiếu Dương vốn là một Mao Sơn tróc quỷ nhân, dũng cảm tiến vào đô thị, gặp người đấu người, gặp quỷ đấu quỷ, gặp yêu đấu yêu, gặp hồ đấu hồ...<br><br>Tương tây Thi vương, Tà Thần bất tử, điệp tiên hung linh, tứ phương quỷ khấu.<br><br>Nữ minh tinh nuôi tiểu quỷ, công chúa hoàng thất hút máu, nữ giám đốc là hồ yêu,...<br><br>Thi triển Mao Sơn thần thuật, đánh lui tất cả!
-                                </div></td>
-                            <td>2026-03-11 20:36:58</td>
-                            <td><div>maosontrocquynhan.jpg</div></td>
-                            <td><a href="#">Edit</a></td>
-                            <td><a href="#">Delete</a></td>
-                        </tr>
+                        <?php
+                            include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
+                            $result = mysqli_query($conn, "SELECT * FROM truyen");
+                            while($row = mysqli_fetch_assoc($result)) {
+                            ?>
+                             <tr>
+                                <td style="text-align: center;"><?php echo $row['Id_truyen'] ?></td>
+                                <td><?php echo $row['Ten'] ?></td>
+                                <td><?php echo $row['TacGia'] ?></td>
+                                <td><?php echo $row['TheLoai'] ?></div></td>
+                                <td><?php echo $row['TongSoChuong'] ?></td>
+                                <td><?php echo $row['TrangThai'] ?></td>
+                                <td><div><?php echo $row['GioiThieu'] ?></div></td>
+                                <td><?php echo $row['NgayTao'] ?></td>
+                                <td><?php echo $row['AnhBia'] ?></td>
+                                <td><a href="#">Edit</a></td>
+                                <td><a href="#">Delete</a></td>
+                            </tr>
+                            <?php
+                            }
+                            ?>
                     </tbody>
                 </table>
             </div>

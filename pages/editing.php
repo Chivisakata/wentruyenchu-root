@@ -10,99 +10,62 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div>
+        <div class="body-container">
             <div class="topBar">    <!--LOGO stand for HOME-->
-                <a href="home.php"><img src="../images/homeIcon.png"></a>   
+                <a href="admin.php"><img src="../images/homeIcon.png"></a>   
             </div>
             <div class="addMenu">
-                <div class="left">
-                    <label class="uploadBlock" id="previewBox">
-                        <input type="file" accept="image/*" id="fileInput">
-                        <span id="placeholder">Click here or Drag a photo</span>
-                    </label>
-                </div>
                 <div class="right">
                     <table class="infoInput">
                         <thead>
                             <th>Column</th>
                             <th>Type</th>
-                            <th>NULL</th>
                             <th>Value</th>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Id_truyen</td>
-                                <td>int(11)</td>
-                                <td><input type="checkbox"></td>
-                                <td><textarea></textarea></td>
-                            </tr>
-                            <tr>
                                 <td>Ten</td>
                                 <td>varchar(255)</td>
-                                <td><input type="checkbox"></td>
                                 <td><textarea></textarea></td>
                             </tr>
                             <tr>
                                 <td>TacGia</td>
                                 <td>varchar(255)</td>
-                                <td><input type="checkbox"></td>
                                 <td><textarea></textarea></td>
                             </tr>
                             <tr>
                                 <td>TheLoai</td>
                                 <td>varchar(255)</td>
-                                <td><input type="checkbox"></td>
                                 <td><textarea></textarea></td>
                             </tr>
                             <tr>
                                 <td>TongSoChuong</td>
                                 <td>int(11)</td>
-                                <td><input type="checkbox"></td>
                                 <td><textarea></textarea></td>
                             </tr>
                             <tr>
                                 <td>TrangThai</td>
                                 <td>varchar(50)</td>
-                                <td><input type="checkbox"></td>
+
                                 <td><textarea></textarea></td>
                             </tr>
                             <tr>
                                 <td>GioiThieu</td>
                                 <td>text</td>
-                                <td><input type="checkbox"></td>
                                 <td><textarea></textarea></td>
                             </tr>
                             <tr>
-                                <td>NgayTao</td>
-                                <td>datetime</td>
-                                <td><input type="checkbox"></td>
-                                <td><textarea></textarea></td>
+                                <td>Avatar</td>
+                                <td>.jpg</td>
+                                <td><input type="file" accept="image/*" id="fileInput"></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
             <div class="functionBtn">
-                <button>Sửa</button>
                 <button>Lưu</button>
             </div>
         </div>
-        <script>
-            const fileInput = document.getElementById('fileInput');
-            const previewBox = document.getElementById('previewBox');
-            const placeholder = document.getElementById('placeholder');
-
-            fileInput.addEventListener('change', function() {
-                const file = this.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                    previewBox.style.backgroundImage = `url(${e.target.result})`;
-                    placeholder.style.display = 'none';
-                    }
-                    reader.readAsDataURL(file);
-                }
-            });
-        </script>
     </body>
 </html>
