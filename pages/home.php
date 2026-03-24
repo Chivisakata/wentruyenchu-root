@@ -54,10 +54,10 @@
                         <p>Xin chào Bạn đọc <?php echo $username; ?></p>
                     </div>
                 </div>
-                <div style="display: flex; flex-direction: row; width:60%;">
-                    <input type="text" placeholder="Nhập tên truyện muốn tìm...">
-                    <button class="searchIcon"><img src="../images/search-icon.png"></button>
-                </div>
+                <form name="search-box" style="display: flex; flex-direction: row; width:60%;" action="../actions/search.php" method="POST">
+                    <input type="text" placeholder="Nhập tên truyện muốn tìm..." name="keyword" required>
+                    <button type="submit" id="searchIcon"><img src="../images/search-icon.png"></button>
+                </form>
                 
                 <div class="login-logout-btn">
                     <?php if (!isset($_SESSION['User_id'])):?>

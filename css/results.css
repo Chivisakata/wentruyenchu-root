@@ -1,0 +1,99 @@
+/* General styling */
+body
+{
+    font-family: "Roboto Mono", "san-serif", "Arial";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Just Update Menu */
+.justUpdate{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-wrap: break-word;
+}
+.justUpdate > div:first-child
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom:10px;
+}
+.justUpdate > div button
+{
+    width:5%;
+    height:auto;
+    font-size: 20px;
+    border:none;
+    border-radius:30px;
+    background-color: white;
+}
+.justUpdate > div button:hover,
+.newest > div button:hover, 
+.fullNovel > div button:hover, 
+.topOTW > div button:hover, 
+.mostLoved > div button:hover
+{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.justUpdate > div button:active,
+.newest > div button:active, 
+.fullNovel > div button:active, 
+.topOTW > div button:active, 
+.mostLoved > div button:active
+{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto; 
+    gap: 20px;       
+    padding-bottom: 10px; 
+}
+.wrapper > a {
+    flex-shrink: 0;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+.wrapper a > p{
+    text-align: center;
+}
+
+
+
+.wrapper img {
+    width: 80%;      
+    height: auto;
+    border-radius: 8px;
+    aspect-ratio: 2 / 3; 
+    object-fit: cover;
+}
+
+/* Default: Show 4 items */
+@media (min-width: 1024px) {
+    .wrapper > a {
+        width: calc(25% - 15px); 
+    }
+}
+
+/* Tablet: Show 3 items */
+@media (min-width: 600px) and (max-width: 1023px) {
+    .wrapper > a {
+        width: calc(33.33% - 14px);
+    }
+}
+
+/* Mobile: Show 2 items */
+@media (max-width: 599px) {
+    .wrapper > a {
+        width: calc(50% - 10px);
+    }
+}
