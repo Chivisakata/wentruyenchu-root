@@ -14,13 +14,9 @@
         <div>
             <!--TOP-->
             <div class="navBar">
-            <div>
-                <a href="home.php"><img src="../images/homeIcon.png" style="width:56px; height:56px;"></a>
-            </div>
-            <div style="display: flex; flex-direction: row; width:60%;">
-                <input type="text" placeholder="Nhập tên truyện muốn tìm...">
-                <button class="searchIcon"><img src="../images/search-icon.png"></button>
-            </div>
+                <div>
+                    <a href="home.php"><img src="../images/homeIcon.png" style="width:56px; height:56px;"></a>
+                </div>
             </div>
             <!--MENU-->
             <h1>THÔNG TIN TRUYỆN</h1>
