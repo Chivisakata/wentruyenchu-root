@@ -12,6 +12,7 @@
     </head>
 
     <body>
+        <?php include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu ?>
         <?php
         session_start();// Bắt đầu session để truy cập biến session
         //kiểm tra session đăng nhập
@@ -153,9 +154,7 @@
                     </div>
                     <div class="wrapper">
                             <?php
-                            include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
-                            $result = mysqli_query($conn, "SELECT * FROM truyen");
-
+                            $result = mysqli_query($conn, "SELECT * FROM truyen ORDER BY NgayTao DESC LIMIT 20;");
                             while($row = mysqli_fetch_assoc($result)) {
                             ?>
                                     <a href="details.php?id=<?php echo $row['Id_truyen']; ?>">
@@ -167,49 +166,24 @@
                             ?>
                 </div>
 
-<!----TOP tuần---->
-                <div class="topOTW">
+<!----Truyện Full---->
+                <div class="fullNovel">
                     <div>
-                        <p>Vừa Cập Nhật:</p>
+                        <p>Truyện FULL:</p>
                         <button>></button>
                     </div>
                     <div class="wrapper">
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        
+                            <?php
+                            $result = mysqli_query($conn, "SELECT * FROM truyen WHERE TrangThai = 'Hoàn thành';");
+                            while($row = mysqli_fetch_assoc($result)) {
+                            ?>
+                                    <a href="details.php?id=<?php echo $row['Id_truyen']; ?>">
+                                        <img src="../images/<?php echo $row['AnhBia']; ?>">
+                                        <p><?php echo $row['Ten']; ?></p>
+                                    </a>
+                            <?php
+                            }
+                            ?>
                     </div>
                 </div>
 
@@ -305,54 +279,6 @@
                         
                     </div>
                 </div>
-
-<!-----Truyện Full-->
-                <div class="fullNovel">
-                    <div>
-                        <p>Truyện Full:</p>
-                        <button>></button>
-                    </div>
-                    
-                    <div class="wrapper">
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        
-                    </div>
-                </div>
-            </div>
         </div>
         <?php include "../components/footer.php";?>
         <script>
