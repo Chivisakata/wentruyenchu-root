@@ -21,7 +21,9 @@ $stmt->execute();
 $result = $stmt->get_result();
 $user = $result->fetch_assoc();
 if (!$user) {
-    die("Sai tài khoản hoặc mật khẩu");
+    $_SESSION["error"] = "Tài khoản không tồn tại!";
+    header("Location: ../pages/login.php");
+    exit();
 }
 // Kiểm tra user tồn tại và mật khẩu đúng
 if ($user && password_verify($password, $user['Pass_word'])) {
@@ -31,23 +33,24 @@ if ($user && password_verify($password, $user['Pass_word'])) {
     $_SESSION['User_name'] = $user['User_name'];
     $_SESSION['Avatar'] = $user['Avatar'];
     $_SESSION['Role'] = $user['Role'];
-
     // Tạo session đăng nhập thành công
     $_SESSION["success"] = "Đăng nhập thành công!";
 
-    //Chuyển sang trang Admin
-    if($user['Role'] == "admin")
+    //Điều hướng
+    if($user['Role'] == "admin")//Trang admin
         {
             header("Location: ../pages/admin.php");
             exit();
         }
 
-    // Chuyển về trang chủ
-    header("Location: ../pages/home.php");  
+    header("Location: ../pages/home.php");//Trang user
     exit();
-
-} else {
-
-    echo "Sai tài khoản hoặc mật khẩu";
-
+} 
+else {
+    $_SESSION["error"] = "Tài khoản hoặc mật khẩu không đúng!";
+    header("Location: ../pages/login.php");
+    exit();
 }
+
+    
+

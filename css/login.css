@@ -1,0 +1,80 @@
+body {
+    font-family: "Roboto Mono", "san-serif", "Arial";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+    min-width: 500px;
+    background-color: grey;
+}
+
+p {
+    padding-left: 28px;
+}
+
+.loginForm {
+    background-color: rgb(29, 29, 29);
+    width: 600px;
+    height: 500px;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.loginForm div {
+    margin-top: 30px;
+}
+
+.loginForm h2 {
+    text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+    width: 90%;
+    height: 10%;
+    padding-left: 10px;
+    margin-left: 20px;
+    border-radius: 20px;
+    font-size: 17px;
+}
+
+button {
+    width: 92%;
+}
+
+.loginBtn,
+.registerBtn {
+    height: 50px;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.loginBtn,
+.registerBtn {
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 20px;
+    background-color: rgb(218, 218, 218);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border: none;
+}
+
+.registerBtn {
+    margin-top: 20px;
+    background-color: rgb(123, 150, 255);
+}
+.loginBtn:hover,
+.registerBtn:hover {
+    cursor: pointer;
+}
+
+.loginBtn:active {
+    filter: brightness(80%)
+}
+
+.registerBtn:active {
+    filter: brightness(80%);
+}

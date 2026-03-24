@@ -42,7 +42,9 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
-    die("Username đã tồn tại");
+    $_SESSION["error"] = "User name đã tồn tại!";
+    header("Location: ../pages/register.php");
+    exit();
 }
 /* hash password */
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
