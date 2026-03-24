@@ -39,18 +39,22 @@
         <div>
             <div class="navBar">
                 <div class="left">
+                <?php if (isset($_SESSION['User_name'])):?>
                     <div class="hamburgerMenu">
                         <button class="hamburger" id="menuBtn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    <div class="menu-options" id="menuOptions">
-                        <button href="#" id="changeAvatar">Đổi Avatar</button>
-                        <input type="file" id="avatarInput" accept=".jpg" style="display: none;">
-                        <button href="#">Truyện đã lưu</button>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <div class="menu-options" id="menuOptions">
+                            <button href="#" id="changeAvatar">Đổi Avatar</button>
+                            <form id="avatarForm" action="../actions/uploadAvatar.php" method="POST" enctype="multipart/form-data" style="display:none;">
+                                <input name="avatar" type="file" id="avatarInput" accept=".jpg" style="display: none;">\
+                            </form>
+                            <button href="#">Truyện đã lưu</button>
+                        </div>
                     </div>
-                    </div>
+                <?php endif; ?>
                     <img src="../images/<?php echo $avatar; ?>">
                     <div class="greetingText">
                         <p>Xin chào Bạn đọc <?php echo $username; ?></p>
@@ -62,7 +66,7 @@
                 </form>
                 
                 <div class="login-logout-btn">
-                    <?php if (!isset($_SESSION['User_id'])):?>
+                    <?php if (!isset($_SESSION['User_name'])):?>
                         <button id="loginBtn">Đăng nhập</button>
                         <script>
                             document.getElementById("loginBtn").onclick = function () {
