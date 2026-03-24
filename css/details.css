@@ -286,4 +286,12 @@ textarea
     color:white;
     font-weight: bold;
 }
+.userComment button:hover
+{
+    cursor: pointer;
+}
+.userComment button:active
+{
+   filter:brightness(85%);
+}
 

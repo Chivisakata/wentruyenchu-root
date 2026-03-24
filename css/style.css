@@ -42,6 +42,11 @@ body
     display:flex;
     flex-direction: row;
 }
+#hamburgerIcon
+{
+    width:50px;
+    height:50px;
+}
 .navBar input[type = "text"]
 {
     font-size: 17px;
@@ -55,6 +60,16 @@ body
 @media (max-width: 599px) {
     .navBar input[type = "text"],.searchIcon {
         display: none;
+    }
+}
+@media (max-width: 599px) {
+    .greetingText{
+        width:80px;
+    }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+    .greetingText {
+        width:100px;
     }
 }
 .navBar button
@@ -276,4 +291,53 @@ body
     }
 }
 
+/* HAMBURGER MENU */
+/* Styling the 3 lines of the hamburger */
+.hamburgerMenu
+{
+    margin-top:7px;
+}
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff; /* White bars so they show on dark background */
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s; /* Makes it smooth if you decide to animate later */
+}
 
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* The dropdown menu */
+.menu-options {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: #222; /* Dark background */
+    border: 1px solid #444;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+    z-index: 100;
+    flex-direction: column;
+}
+
+/* This is the class the JavaScript will toggle */
+.menu-options.show {
+    display: flex !important;
+}
+
+.menu-options a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu-options a:hover {
+    background-color: #333;
+}

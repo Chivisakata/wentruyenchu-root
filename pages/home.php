@@ -38,10 +38,20 @@
         <div>
             <div class="navBar">
                 <div class="left">
+                    <div class="hamburgerMenu">
+                        <button class="hamburger" id="menuBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="menu-options" id="menuOptions">
+                        <a href="#">Đổi Avatar</a>
+                        <a href="#">Truyện đã lưu</a>
+                    </div>
+                    </div>
                     <img src="../images/<?php echo $avatar; ?>">
-                    <div>
-                        <p>Xin chào</p>
-                        <p>Bạn đọc <?php echo $username; ?></p>
+                    <div class="greetingText">
+                        <p>Xin chào Bạn đọc <?php echo $username; ?></p>
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: row; width:60%;">
@@ -339,5 +349,28 @@
             </div>
         </div>
         <?php include "../components/footer.php";?>
+        <script>
+            // Wrap everything in a DOMContentLoaded listener
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menuBtn');
+    const menuOptions = document.getElementById('menuOptions');
+
+    if (menuBtn && menuOptions) {
+        menuBtn.addEventListener('click', (event) => {
+            // Prevent the click from bubbling up to the window
+            event.stopPropagation(); 
+            menuOptions.classList.toggle('show');
+            console.log("Menu toggled!"); // Check your browser console (F12) to see this
+        });
+
+        // Close the menu if user clicks anywhere else
+        window.addEventListener('click', () => {
+            menuOptions.classList.remove('show');
+        });
+    } else {
+        console.error("Could not find menuBtn or menuOptions IDs in the HTML.");
+    }
+});
+        </script>
     </body>
 </html>
