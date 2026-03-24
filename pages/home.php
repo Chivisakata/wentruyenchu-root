@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <script src="../scripts/changeAvatar.js" defer></script>
     </head>
 
     <body>
@@ -45,8 +46,9 @@
                         <span></span>
                     </button>
                     <div class="menu-options" id="menuOptions">
-                        <a href="#">Đổi Avatar</a>
-                        <a href="#">Truyện đã lưu</a>
+                        <button href="#" id="changeAvatar">Đổi Avatar</button>
+                        <input type="file" id="avatarInput" accept=".jpg" style="display: none;">
+                        <button href="#">Truyện đã lưu</button>
                     </div>
                     </div>
                     <img src="../images/<?php echo $avatar; ?>">
