@@ -14,58 +14,61 @@
             <div class="topBar">    <!--LOGO stand for HOME-->
                 <a href="admin.php"><img src="../images/homeIcon.png"></a>   
             </div>
-            <div class="addMenu">
-                <div class="right">
-                    <table class="infoInput">
-                        <thead>
-                            <th>Column</th>
-                            <th>Type</th>
-                            <th>Value</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Ten</td>
-                                <td>varchar(255)</td>
-                                <td><textarea></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>TacGia</td>
-                                <td>varchar(255)</td>
-                                <td><textarea></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>TheLoai</td>
-                                <td>varchar(255)</td>
-                                <td><textarea></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>TongSoChuong</td>
-                                <td>int(11)</td>
-                                <td><textarea></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>TrangThai</td>
-                                <td>varchar(50)</td>
+            <form action="">
+                <div class="addMenu">
+                    <div class="right">
+                        <table class="infoInput">
+                            <thead>
+                                <th>Column</th>
+                                <th>Type</th>
+                                <th>Value</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ten</td>
+                                    <td>varchar(255)</td>
+                                    <td><textarea></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>TacGia</td>
+                                    <td>varchar(255)</td>
+                                    <td><textarea></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>TheLoai</td>
+                                    <td>varchar(255)</td>
+                                    <td><textarea></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>TongSoChuong</td>
+                                    <td>int(11)</td>
+                                    <td><textarea></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>TrangThai</td>
+                                    <td>varchar(50)</td>
 
-                                <td><textarea></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>GioiThieu</td>
-                                <td>text</td>
-                                <td><textarea></textarea></td>
-                            </tr>
-                            <tr>
-                                <td>Avatar</td>
-                                <td>.jpg</td>
-                                <td><input type="file" accept="image/*" id="fileInput"></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                    <td><textarea></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>GioiThieu</td>
+                                    <td>text</td>
+                                    <td><textarea></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Avatar</td>
+                                    <td>.jpg</td>
+                                    <td><input type="file" accept="image/*" id="fileInput"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
+                <div class="functionBtn">
+                <button type="submit">Lưu</button>
             </div>
-            <div class="functionBtn">
-                <button>Lưu</button>
-            </div>
+            </form>
+            
         </div>
     </body>
 </html>
