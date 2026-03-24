@@ -10,18 +10,19 @@
 </head>
 
 <body>
+    <?php
+    $keyword = $_GET['keyword'] ?? '';
+    ?>
     <!----MỚI UPDATE---->
-
     <div class="justUpdate">
         <div>
-            <p>KẾT QUẢ TÌM KIẾM CHO:<?php echo ?></p>
+            <p>Kết quả cho: <?php echo $keyword;?></p>
             <button>></button>
         </div>
         <div class="wrapper">
             <?php
             include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
-            $result = mysqli_query($conn, "SELECT * FROM truyen");
-
+            $result = mysqli_query($conn, "SELECT * FROM truyen WHERE (Ten LIKE '%$keyword%' OR TacGia LIKE '%$keyword%')");
             while ($row = mysqli_fetch_assoc($result)) {
             ?>
                 <a href="details.php?id=<?php echo $row['Id_truyen']; ?>">
@@ -32,6 +33,7 @@
             }
             ?>
         </div>
+    </div>
 
 </body>
 
