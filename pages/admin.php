@@ -11,6 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <?php $type = $_GET['type'] ?? 'truyen'; //nhận option để load đúng giao diện ?>
         <!--Kiểm tra role-->
         <?php
         session_start();//gọi session để lấy biến session 
@@ -45,64 +46,55 @@
         <div style="display:flex; flex-direction: row;">
             <div class="leftMenu">
                 <div class="btnGroup">
-                    <button>Truyen</button>
-                    <button>Chuong</button>
-                    <button>Rating</button>
-                    <button>Users</button>
+                    <button onclick="window.location.href='admin.php?type=truyen'">Truyen</button>
+                    <button onclick="window.location.href='admin.php?type=chuong'">Chuong</button>
+                    <button onclick="window.location.href='admin.php?type=users'">Users</button>
                 </div>
             </div>
             <div class="main">
-                <table class="infoInput">
+               <table class="infoInput">
                     <thead>
                         <th>Id_truyen</th>
-                        <th>Ten</th>
-                        <th>TacGia</th>
-                        <th>TheLoai</th>
-                        <th>TongSoChuong</th>
-                        <th>TrangThai</th>
-                        <th>GioiThieu</th>
-                        <th>NgayTao</th>
-                        <th>AnhBia</th>
+                        <th>TenTruyen</th>
+                        <th>Id_Chuong</th> 
+                        <th>TenChuong</th>
+                        <th>SoChuong</th>
                         <th>
-                            <button id="addstoryBtn">Thêm truyện</button>
+                            <button id="addstoryBtn">Thêm chương</button>
                             <script>
-                            document.getElementById("addstoryBtn").onclick = function () {
-                            window.location.href = "add.php";
-                            };
+                                document.getElementById("addstoryBtn").onclick = function() {
+                                    window.location.href = "add.php";
+                                };
                             </script>
                         </th>
                         <th></th>
                     </thead>
                     <tbody>
                         <?php
-                            include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
-                            $result = mysqli_query($conn, "SELECT * FROM truyen");
-                            while($row = mysqli_fetch_assoc($result)) {
-                            ?>
-                             <tr>
+                        include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
+                        $result = mysqli_query($conn, "SELECT truyen.*, chuong.* FROM truyen JOIN chuong ON truyen.Id_truyen = chuong.Id_truyen");
+                        while ($row = mysqli_fetch_assoc($result)) {
+                        ?>
+                            <tr>
                                 <td style="text-align: center;"><?php echo $row['Id_truyen'] ?></td>
                                 <td><?php echo $row['Ten'] ?></td>
-                                <td><?php echo $row['TacGia'] ?></td>
-                                <td><?php echo $row['TheLoai'] ?></div></td>
-                                <td><?php echo $row['TongSoChuong'] ?></td>
-                                <td><?php echo $row['TrangThai'] ?></td>
-                                <td><div><?php echo $row['GioiThieu'] ?></div></td>
-                                <td><?php echo $row['NgayTao'] ?></td>
-                                <td><?php echo $row['AnhBia'] ?></td>
+                                <td><?php echo $row['Id_chuong'] ?></td>
+                                <td><?php echo $row['TenChuong'] ?></div></td>
+                                <td><?php echo $row['SoChuong'] ?></td>
                                 <td>
                                     <a href="editing.php?id=<?php echo $row['Id_truyen']; ?>">
                                         Edit
                                     </a>
-                                </td> 
+                                </td>
                                 <td>
                                     <a href="../actions/deleteTruyen.php?id=<?php echo $row['Id_truyen']; ?>">
                                         Delete
                                     </a>
                                 </td>
                             </tr>
-                            <?php
-                            }
-                            ?>
+                        <?php
+                        }
+                        ?>
                     </tbody>
                 </table>
             </div>
