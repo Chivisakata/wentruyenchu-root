@@ -6,7 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" a href="../css/results.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+        body
+        {
+            font-family: 'Roboto Mono', sans-serif;
+        }
+        .resultStr
+        {
+            font-size:26px;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,7 +30,7 @@
     <!----MỚI UPDATE---->
     <div class="justUpdate">
         <div>
-            <p>Kết quả cho: <?php echo $keyword;?></p>
+            <p class="resultStr">Kết quả cho: <b><?php echo $keyword;?></b></p>
             <button>></button>
         </div>
         <div class="wrapper">
