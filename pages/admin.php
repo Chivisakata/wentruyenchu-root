@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin's page</title>
         <link rel="stylesheet" a href="../css/admin.css">
+        <link rel="stylesheet" a href="../css/popUp.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
@@ -19,7 +20,25 @@
         exit();
         }
         ?>
-        
+        <!--Kiểm tra trạng thái upload-->
+        <?php
+        if (isset($_SESSION["success"])) {
+            echo "<div class='success-message'>" . $_SESSION["success"] . "</div>";
+            unset($_SESSION["success"]);
+        ?>
+            <script src="../scripts/killPopupNotification.js"></script>
+        <?php
+        }
+
+        if (isset($_SESSION["error"])) {
+            echo "<div class='error-message'>" . $_SESSION["error"] . "</div>";
+            unset($_SESSION["error"]);
+        ?>
+        <script src="../scripts/killPopupNotification.js"></script>
+        <?php
+        }
+        ?>
+
         <div class="topBar">    <!--LOGO stand for HOME-->
             <a href="home.php"><img src="../images/homeIcon.png"></a>      
         </div>
@@ -48,7 +67,7 @@
                             <button id="addstoryBtn">Thêm truyện</button>
                             <script>
                             document.getElementById("addstoryBtn").onclick = function () {
-                            window.location.href = "editing.php";
+                            window.location.href = "add.php";
                             };
                             </script>
                         </th>
