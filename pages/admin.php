@@ -93,8 +93,12 @@
                                     <a href="editing.php?id=<?php echo $row['Id_truyen']; ?>">
                                         Edit
                                     </a>
+                                </td> 
+                                <td>
+                                    <a href="../actions/deleteTruyen.php?id=<?php echo $row['Id_truyen']; ?>">
+                                        Delete
+                                    </a>
                                 </td>
-                                <td><a href="#">Delete</a></td>
                             </tr>
                             <?php
                             }
