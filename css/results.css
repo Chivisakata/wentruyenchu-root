@@ -12,6 +12,7 @@ body
     flex-direction: column;
     padding: 20px;
     overflow-wrap: break-word;
+    min-height: 90vh;
 }
 .justUpdate > div:first-child
 {
