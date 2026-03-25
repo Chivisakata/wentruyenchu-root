@@ -89,7 +89,11 @@
                                 <td><div><?php echo $row['GioiThieu'] ?></div></td>
                                 <td><?php echo $row['NgayTao'] ?></td>
                                 <td><?php echo $row['AnhBia'] ?></td>
-                                <td><a href="#">Edit</a></td>
+                                <td>
+                                    <a href="editing.php?id=<?php echo $row['Id_truyen']; ?>">
+                                        Edit
+                                    </a>
+                                </td>
                                 <td><a href="#">Delete</a></td>
                             </tr>
                             <?php
