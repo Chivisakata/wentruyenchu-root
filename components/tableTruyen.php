@@ -10,7 +10,7 @@
         <th>NgayTao</th>
         <th>AnhBia</th>
         <th>
-            <button id="addstoryBtn">Thêm truyện</button>
+            <button class="addBtn" id="addstoryBtn">Thêm truyện</button>
             <script>
                 document.getElementById("addstoryBtn").onclick = function() {
                     window.location.href = "uploadTruyen.php";
