@@ -24,10 +24,10 @@
             <tr>
                 <td style="text-align: center;"><?php echo $row['Id_truyen'] ?></td>
                 <td><?php echo $row['Ten'] ?></td>
-                <td><?php echo $row['Id_chuong'] ?></td>
+                <td style="padding-left: 80px;"><?php echo $row['Id_chuong'] ?></td>
                 <td><?php echo $row['TenChuong'] ?></div>
                 </td>
-                <td><?php echo $row['SoChuong'] ?></td>
+                <td style="padding-left: 80px;" ><?php echo $row['SoChuong'] ?></td>
                 <td>
                     <a href="updateChuong.php?Id_chuong=<?php echo $row['Id_chuong']; ?>">
                         Edit

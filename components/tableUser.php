@@ -13,9 +13,9 @@
         ?>
             <tr>
                 <td style="text-align: center;"><?php echo $row['Id_user'] ?></td>
-                <td><?php echo $row['User_name'] ?></td>
-                <td><?php echo $row['NgayDangKy'] ?></td>
-                <td><?php echo $row['Role'] ?></td>
+                <td style="padding-left: 80px;"><?php echo $row['User_name'] ?></td>
+                <td style="padding-left: 40px;"><?php echo $row['NgayDangKy'] ?></td>
+                <td style="padding-left: 110px;"><?php echo $row['Role'] ?></td>
                 <td>
                     <a href="../actions/deleteUser.php?Id_user=<?php echo $row['Id_user']; ?>">
                         Delete

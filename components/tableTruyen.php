@@ -31,7 +31,7 @@
                 <td><?php echo $row['TacGia'] ?></td>
                 <td><?php echo $row['TheLoai'] ?></div>
                 </td>
-                <td><?php echo $row['TongSoChuong'] ?></td>
+                <td style="padding-left: 40px;"><?php echo $row['TongSoChuong'] ?></td>
                 <td><?php echo $row['TrangThai'] ?></td>
                 <td>
                     <div><?php echo $row['GioiThieu'] ?></div>
