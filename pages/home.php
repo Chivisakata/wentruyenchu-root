@@ -97,51 +97,51 @@
             <div class="menu">
                 <div class="categories">
                     <ul>
-                        <li><a href=#>Ngôn Tình</a></li>
-                        <li>HE</li>
-                        <li>Ngọt</li>
-                        <li>Nữ Cường</li>
-                        <li>Sủng</li>
-                        <li>Niên Đại</li>
-                        <li>Chữa Lành</li>
-                        <li>Hiện Đại</li>
-                        <li>Sảng Văn</li>
-                        <li>Xuyên Không</li>
-                        <li>Gia Đình</li>
-                        <li>Hài Hước</li>
-                        <li>Dưỡng Thê</li>
-                        <li>Cổ Đại</li>
-                        <li>Điền Văn</li>
-                        <li>Trọng Sinh</li>
-                        <li>Hào Môn Thế Gia</li>
-                        <li>Hệ Thống</li>
-                        <li>Dị Năng</li>
-                        <li>Đô Thị</li>
-                        <li>Cưới Trước Yêu Sau</li>
-                        <li>Xuyên Sách</li>
-                        <li>Hư Cấu Kỳ Ảo</li>
-                        <li>Tiểu Thuyết</li>
-                        <li>Linh Dị</li>
-                        <li>Mỹ Thực</li>
-                        <li>Gia Đấu</li>
-                        <li>Hành Động</li>
-                        <li>Tổng Tài</li>
-                        <li>Kinh Dị</li>
-                        <li>Truy Thê</li>
-                        <li>Ngược</li>
-                        <li>Hoán Đổi Thân Xác</li>
-                        <li>Trả Thù</li>
-                        <li>Học Đường</li>
-                        <li>Tiên Hiệp</li>
-                        <li>Showbiz</li>
-                        <li>Đam Mỹ</li>
-                        <li>Trinh Thám</li>
-                        <li>Bách Hợp</li>
-                        <li>Phiêu Lưu</li>
-                        <li>Độc Tâm</li>
-                        <li>Phép Thuật</li>
-                        <li>BE</li>
-                        <li>OE</li>
+                        <li><a href="results.php?keyword=<?= urlencode('Ngôn Tình') ?>">Ngôn Tình</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('HE') ?>">HE</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Ngọt') ?>">Ngọt</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Nữ Cường') ?>">Nữ Cường</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Sủng') ?>">Sủng</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Niên Đại') ?>">Niên Đại</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Chữa Lành') ?>">Chữa Lành</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Hiện Đại') ?>">Hiện Đại</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Sảng Văn') ?>">Sảng Văn</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Xuyên Không') ?>">Xuyên Không</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Gia Đình') ?>">Gia Đình</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Hài Hước') ?>">Hài Hước</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Dưỡng Thê') ?>">Dưỡng Thê</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Cổ Đại') ?>">Cổ Đại</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Điền Văn') ?>">Điền Văn</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Trọng Sinh') ?>">Trọng Sinh</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Hào Môn Thế Gia') ?>">Hào Môn Thế Gia</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Hệ Thống') ?>">Hệ Thống</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Dị Năng') ?>">Dị Năng</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Đô Thị') ?>">Đô Thị</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Cưới Trước Yêu Sau') ?>">Cưới Trước Yêu Sau</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Xuyên Sách') ?>">Xuyên Sách</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Hư Cấu Kỳ Ảo') ?>">Hư Cấu Kỳ Ảo</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Tiểu Thuyết') ?>">Tiểu Thuyết</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Linh Dị') ?>">Linh Dị</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Mỹ Thực') ?>">Mỹ Thực</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Gia Đấu') ?>">Gia Đấu</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Hành Động') ?>">Hành Động</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Tổng Tài') ?>">Tổng Tài</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Kinh Dị') ?>">Kinh Dị</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Truy Thê') ?>">Truy Thê</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Ngược') ?>">Ngược</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Hoán Đổi Thân Xác') ?>">Hoán Đổi Thân Xác</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Trả Thù') ?>">Trả Thù</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Học Đường') ?>">Học Đường</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Tiên Hiệp') ?>">Tiên Hiệp</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Showbiz') ?>">Showbiz</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Đam Mỹ') ?>">Đam Mỹ</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Trinh Thám') ?>">Trinh Thám</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Bách Hợp') ?>">Bách Hợp</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Phiêu Lưu') ?>">Phiêu Lưu</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Độc Tâm') ?>">Độc Tâm</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('Phép Thuật') ?>">Phép Thuật</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('BE') ?>">BE</a></li>
+                        <li><a href="results.php?keyword=<?= urlencode('OE') ?>">OE</a></li>
                     </ul>
                 </div>
 

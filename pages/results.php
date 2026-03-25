@@ -27,7 +27,6 @@
     <?php
     $keyword = $_GET['keyword'] ?? '';
     ?>
-    <!----MỚI UPDATE---->
     <div class="justUpdate">
         <div>
             <p class="resultStr">Kết quả cho: <b><?php echo $keyword;?></b></p>
@@ -36,7 +35,7 @@
         <div class="wrapper">
             <?php
             include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
-            $result = mysqli_query($conn, "SELECT * FROM truyen WHERE (Ten LIKE '%$keyword%' OR TacGia LIKE '%$keyword%')");
+            $result = mysqli_query($conn, "SELECT * FROM truyen WHERE (Ten LIKE '%$keyword%' OR TacGia LIKE '%$keyword%' OR TheLoai LIKE '%$keyword%')");
             while ($row = mysqli_fetch_assoc($result)) {
             ?>
                 <a href="details.php?id=<?php echo $row['Id_truyen']; ?>">
