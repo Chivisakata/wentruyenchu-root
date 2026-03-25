@@ -26,7 +26,7 @@
 
         <?php
         //kiểm tra session của user
-        if(isset($_SESSION['User_name'])) {
+        if(isset($_SESSION['User_id'])) {
             $userid = $_SESSION['User_id'];
             $username = $_SESSION['User_name'];
             $avatar = $_SESSION['Avatar'];
@@ -52,7 +52,7 @@
                             <form id="avatarForm" action="../actions/uploadAvatar.php" method="POST" enctype="multipart/form-data" style="display:none;">
                                 <input name="avatar" type="file" id="avatarInput" accept=".jpg" style="display: none;">\
                             </form>
-                            <button href="#">Truyện đã lưu</button>
+                            <button><a href="favorite.php" style="text-decoration: none;color: inherit;display:block">Truyện đã lưu</a></button>
                         </div>
                     </div>
                 <?php endif; ?>

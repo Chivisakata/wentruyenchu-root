@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
     <body>
+        <?php session_start(); //khởi tạo session ?> 
         <div>
             <!--TOP-->
             <div class="navBar">
@@ -59,7 +60,27 @@
                     </div>
                     <div class="bottomBtn">
                         <div>
-                            <button class="saveBtn">Lưu</button>
+                            <?php if (isset($_SESSION['User_id'])):?>
+                                <?php
+                                    $userId = (int)$_SESSION['User_id'];
+                                    $truyenId = (int)$_GET['id'];
+                                    $favorite = mysqli_query($conn,"SELECT 1 FROM yeuthich WHERE Id_truyen = $truyenId AND Id_user = $userId");?>
+                                    <?php
+                                        if ($favorite->num_rows > 0){
+                                            ?>
+                                            <button class="save-unsave-btn" id="unFavoriteBtn">Đã Lưu</button>
+                                            <script src="../scripts/favorite.js"></script>
+                                            <?php
+                                        }else{
+                                            
+                                            ?>
+                                            <button class="save-unsave-btn" id="addFavoriteBtn">Lưu</button>
+                                            <script src="../scripts/favorite.js"></script>
+                                            <?php
+                                        }
+                                    else:
+                                        ?><a href="login.php"><button class="save-unsave-btn" hre>Đăng nhập để lưu</button></a><?php
+                                    endif;?>
                         </div>
                         <p>Rating:</p>
                         <div class="rating">
