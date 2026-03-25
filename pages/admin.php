@@ -53,6 +53,15 @@
             </div>
             <div class="main">
                <table class="infoInput">
+                    <colgroup>
+                        <col style="width:100px">
+                        <col style="width:250px">
+                        <col style="width:100x">
+                        <col style="width:550px">
+                        <col style="width:50px">
+                        <col style="width:90px">
+                        <col style="width:120px">
+                    </colgroup>
                     <thead>
                         <th>Id_truyen</th>
                         <th>TenTruyen</th>
@@ -79,7 +88,7 @@
                                 <td style="text-align: center;"><?php echo $row['Id_truyen'] ?></td>
                                 <td><?php echo $row['Ten'] ?></td>
                                 <td><?php echo $row['Id_chuong'] ?></td>
-                                <td><?php echo $row['TenChuong'] ?></div></td>
+                                <td><?php echo $row['TenChuong'] ?></td>
                                 <td><?php echo $row['SoChuong'] ?></td>
                                 <td>
                                     <a href="editing.php?id=<?php echo $row['Id_truyen']; ?>">
