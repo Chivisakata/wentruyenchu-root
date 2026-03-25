@@ -146,7 +146,6 @@
                 </div>
 
 <!----MỚI UPDATE---->
-
                 <div class="justUpdate">
                     <div>
                         <p>Vừa Cập Nhật:</p>
@@ -165,7 +164,6 @@
                             }
                             ?>
                 </div>
-
 <!----Truyện Full---->
                 <div class="fullNovel">
                     <div>
@@ -187,96 +185,46 @@
                     </div>
                 </div>
 
-<!----MỚI NHẤT---->
+<!----NGÔN TÌNH---->
                 <div class="newest">
                     <div>
-                        <p>Mới Nhất:</p>
+                        <p>Truyện Ngôn Tình:</p>
                         <button>></button>
                     </div>
-                    
                     <div class="wrapper">
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        
+                            <?php
+                            $result = mysqli_query($conn, "SELECT * FROM truyen WHERE TheLoai LIKE '%Ngôn Tình%';");
+                            while($row = mysqli_fetch_assoc($result)) {
+                            ?>
+                                    <a href="details.php?id=<?php echo $row['Id_truyen']; ?>">
+                                        <img src="../images/<?php echo $row['AnhBia']; ?>">
+                                        <p><?php echo $row['Ten']; ?></p>
+                                    </a>
+                            <?php
+                            }
+                            ?>
                     </div>
                 </div>
 
-<!----YÊU THÍCH NHẤT-->
+
+<!----BÁCH HỢP-->
                 <div class="mostLoved">
                     <div>
-                        <p>Vừa Cập Nhật:</p>
+                        <p>Truyện Bách Hợp:</p>
                         <button>></button>
                     </div>
                     <div class="wrapper">
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        <a>
-                            <img src="../images/placeholder.jpg">
-                            <p>TenTP</p>
-                            <p>TenTG</p>
-                        </a>
-                        
+                            <?php
+                            $result = mysqli_query($conn, "SELECT * FROM truyen WHERE TheLoai LIKE '%Bách Hợp%';");
+                            while($row = mysqli_fetch_assoc($result)) {
+                            ?>
+                                    <a href="details.php?id=<?php echo $row['Id_truyen']; ?>">
+                                        <img src="../images/<?php echo $row['AnhBia']; ?>">
+                                        <p><?php echo $row['Ten']; ?></p>
+                                    </a>
+                            <?php
+                            }
+                            ?>
                     </div>
                 </div>
         </div>
