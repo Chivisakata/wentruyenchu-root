@@ -1,9 +1,13 @@
 <?php
 session_start();
+if (!isset($_SESSION['Role']) || $_SESSION['Role'] !== 'admin') {
+        // không phải admin từ chối truy cập
+        header("Location: /403.php"); 
+        exit();
+        }
+
 include 'connect.php';
-
 $idUser = (int)$_GET['Id_user'];
-
 // Chuẩn bị câu lệnh SQL
 $sql = "DELETE FROM users WHERE Id_user = ?";
 $stmt = $conn->prepare($sql);

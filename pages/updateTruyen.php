@@ -10,6 +10,16 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <!--Kiểm tra role-->
+        <?php
+        session_start();//gọi session để lấy biến session 
+        if (!isset($_SESSION['Role']) || $_SESSION['Role'] !== 'admin') {
+        // không phải admin từ chối truy cập
+        header("Location: /403.php"); 
+        exit();
+        }
+        ?>
+        
         <?php 
             $idTruyen = (int)$_GET['id'];
             include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu

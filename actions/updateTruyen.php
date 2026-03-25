@@ -1,7 +1,12 @@
 <?php
 session_start();
-include 'connect.php';
+if (!isset($_SESSION['Role']) || $_SESSION['Role'] !== 'admin') {
+        // không phải admin từ chối truy cập
+        header("Location: /403.php"); 
+        exit();
+        }
 
+include 'connect.php';
 // Lấy dữ liệu từ form
 $id = $_POST['Id_truyen'];
 $ten = $_POST['Ten'];
