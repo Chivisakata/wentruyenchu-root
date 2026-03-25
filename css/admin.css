@@ -46,7 +46,6 @@ body
 }
 button:hover
 {
-    width:100%;
     cursor: pointer;
     filter: brightness(130%);
 }
@@ -99,7 +98,7 @@ tr td > div
     overflow:hidden;
 }
 
-#addstoryBtn
+.addBtn
 {
     background-color: rgb(54, 133, 237);
     color:white;
@@ -110,11 +109,11 @@ tr td > div
     border-radius: 10px;
     border: none;
 }
-#addstoryBtn:hover
+.addBtn:hover
 {
     border: 1px solid #000000;
 }
-#addstoryBtn:active
+.addBtn:active
 {
     background-color: rgb(85, 150, 234);
 }

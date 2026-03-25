@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UpdateChuong</title>
+        <link rel="stylesheet" href="../css/addChuong.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <?php 
+            $idChuong = (int)$_GET['Id_chuong'];
+            include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
+            $result = mysqli_query($conn, "SELECT * FROM chuong WHERE Id_chuong = $idChuong");
+            $row = mysqli_fetch_assoc($result);
+        ?>
+        <div class="body-container">
+            <div class="topBar">    <!--LOGO stand for HOME-->
+                <a href="admin.php"><img src="../images/homeIcon.png"></a>   
+            </div>
+                <div class="addMenu">
+                    <div class="right">
+                        <form action="../actions/updateChuong.php" method="POST" enctype="multipart/form-data">
+                        <table class="infoInput">
+                            <thead>
+                                <th>Column</th>
+                                <th>Type</th>
+                                <th>Value</th>
+                            </thead>
+                            <tbody>
+                                <tr style="display: none;">
+                                    <td><textarea required name="Id_chuong"><?php echo $row['Id_chuong']; ?></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Id_truyen</td>
+                                    <td>int</td>
+                                    <td><textarea required name="Id_truyen"><?php echo $row['Id_truyen']; ?></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>TenChuong</td>
+                                    <td>varchar(255)</td>
+                                    <td><textarea required name="TenChuong"><?php echo $row['TenChuong']; ?></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>NoiDung</td>
+                                    <td>text</td>
+                                    <td><textarea name="NoiDung"><?php echo $row['NoiDung']; ?></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>SoChuong</td>
+                                    <td>int</td>
+
+                                    <td><textarea required name="SoChuong"><?php echo $row['SoChuong']; ?></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>  
+                <div class="functionBtn">
+                <button type="submit">Lưu</button>
+                </form>
+            </div>
+           
+            
+        </div>
+    </body>
+</html>

@@ -60,10 +60,10 @@
                         <th>TenChuong</th>
                         <th>SoChuong</th>
                         <th>
-                            <button id="addstoryBtn">Thêm chương</button>
+                            <button class="addBtn" id="addChuong">Thêm chương</button>
                             <script>
-                                document.getElementById("addstoryBtn").onclick = function() {
-                                    window.location.href = "add.php";
+                                document.getElementById("addChuong").onclick = function() {
+                                    window.location.href = "addChuong.php";
                                 };
                             </script>
                         </th>
@@ -82,12 +82,12 @@
                                 <td><?php echo $row['TenChuong'] ?></div></td>
                                 <td><?php echo $row['SoChuong'] ?></td>
                                 <td>
-                                    <a href="editing.php?id=<?php echo $row['Id_truyen']; ?>">
+                                    <a href="updateChuong.php?Id_chuong=<?php echo $row['Id_chuong']; ?>">
                                         Edit
                                     </a>
                                 </td>
                                 <td>
-                                    <a href="../actions/deleteTruyen.php?id=<?php echo $row['Id_truyen']; ?>">
+                                    <a href="../actions/deleteTruyen.php?Id_chuong=<?php echo $row['Id_chuong']; ?>">
                                         Delete
                                     </a>
                                 </td>
