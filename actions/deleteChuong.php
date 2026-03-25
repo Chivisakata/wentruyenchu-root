@@ -5,19 +5,19 @@ if (!isset($_SESSION['Role']) || $_SESSION['Role'] !== 'admin') {
         header("Location: /403.php"); 
         exit();
         }
-
 include 'connect.php';
-$id = $_GET['id'];
+
+$idChuong = (int)$_GET['Id_chuong'];
 // Chuẩn bị câu lệnh SQL
-$sql = "DELETE FROM truyen WHERE Id_truyen = ?";
+$sql = "DELETE FROM chuong WHERE Id_chuong = ?";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $id);
+$stmt->bind_param("i", $idChuong);
 
 // Thực thi
 if ($stmt->execute()) {
-     $_SESSION["success"] = "Xóa truyện thành công!";
+     $_SESSION["success"] = "Xóa chương thành công!";
 } else {
-    $_SESSION["error"] = "Lỗi khi xóa truyện!";
+    $_SESSION["error"] = "Lỗi khi xóa chương!";
 }
 
 // Redirect về admin

@@ -46,7 +46,6 @@ body
 }
 button:hover
 {
-    width:100%;
     cursor: pointer;
     filter: brightness(130%);
 }
@@ -121,7 +120,7 @@ tbody tr:hover td
     font-size: 16px;
 }
 
-#addstoryBtn
+.addBtn
 {
     background-color: rgb(54, 133, 237);
     color:white;
@@ -134,11 +133,11 @@ tbody tr:hover td
     text-align: center;
     padding-right: 10px;;
 }
-#addstoryBtn:hover
+.addBtn:hover
 {
     border: 1px solid #000000;
 }
-#addstoryBtn:active
+.addBtn:active
 {
     background-color: rgb(85, 150, 234);
 }

@@ -5,7 +5,6 @@ require_once "connect.php"; // file connect DB
 if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
     $fileTmpPath = $_FILES['avatar']['tmp_name'];
     $fileName = $_FILES['avatar']['name'];
-    $fileSize = $_FILES['avatar']['size'];
     $fileType = $_FILES['avatar']['type'];
 
     // Kiểm tra file .jpg

@@ -10,10 +10,10 @@
         <th>NgayTao</th>
         <th>AnhBia</th>
         <th>
-            <button id="addstoryBtn">Thêm truyện</button>
+            <button class="addBtn" id="addstoryBtn">Thêm truyện</button>
             <script>
                 document.getElementById("addstoryBtn").onclick = function() {
-                    window.location.href = "add.php";
+                    window.location.href = "uploadTruyen.php";
                 };
             </script>
         </th>
@@ -39,7 +39,7 @@
                 <td><?php echo $row['NgayTao'] ?></td>
                 <td><?php echo $row['AnhBia'] ?></td>
                 <td>
-                    <a href="editing.php?id=<?php echo $row['Id_truyen']; ?>">
+                    <a href="updateTruyen.php?id=<?php echo $row['Id_truyen']; ?>">
                         Edit
                     </a>
                 </td>

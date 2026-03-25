@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Add</title>
-        <link rel="stylesheet" href="../css/uploadTruyen.css">
+        <title>AddChuong</title>
+        <link rel="stylesheet" href="../css/uploadChuong.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
@@ -19,14 +19,13 @@
         exit();
         }
         ?>
-        
         <div class="body-container">
             <div class="topBar">    <!--LOGO stand for HOME-->
                 <a href="admin.php"><img src="../images/homeIcon.png"></a>   
             </div>
                 <div class="addMenu">
                     <div class="right">
-                        <form action="../actions/uploadTruyen.php" method="POST" enctype="multipart/form-data">
+                        <form action="../actions/uploadChuong.php" method="POST" enctype="multipart/form-data">
                         <table class="infoInput">
                             <thead>
                                 <th>Column</th>
@@ -35,40 +34,25 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Ten</td>
+                                    <td>Id_truyen</td>
+                                    <td>int</td>
+                                    <td><textarea required name="Id_truyen"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>TenChuong</td>
                                     <td>varchar(255)</td>
-                                    <td><textarea required name="Ten"></textarea></td>
+                                    <td><textarea required name="TenChuong"></textarea></td>
                                 </tr>
                                 <tr>
-                                    <td>TacGia</td>
-                                    <td>varchar(255)</td>
-                                    <td><textarea required name="TacGia"></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td>TheLoai</td>
-                                    <td>varchar(255)</td>
-                                    <td><textarea required name="TheLoai"></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td>TongSoChuong</td>
-                                    <td>int(11)</td>
-                                    <td><textarea name="TongSoChuong"></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td>TrangThai</td>
-                                    <td>varchar(50)</td>
-
-                                    <td><textarea required name="TrangThai"></textarea></td>
-                                </tr>
-                                <tr>
-                                    <td>GioiThieu</td>
+                                    <td>NoiDung</td>
                                     <td>text</td>
-                                    <td><textarea required name="GioiThieu"></textarea></td>
+                                    <td><textarea name="NoiDung"></textarea></td>
                                 </tr>
                                 <tr>
-                                    <td>Avatar</td>
-                                    <td>.jpg</td>
-                                    <td><input type="file" accept="image/*" id="fileInput" name="AnhBia" accept=".jpg"s required></td>
+                                    <td>SoChuong</td>
+                                    <td>int</td>
+
+                                    <td><textarea required name="SoChuong"></textarea></td>
                                 </tr>
                             </tbody>
                         </table>

@@ -52,60 +52,20 @@
                 </div>
             </div>
             <div class="main">
-               <table class="infoInput">
-                    <colgroup>
-                        <col style="width:100px">
-                        <col style="width:250px">
-                        <col style="width:100x">
-                        <col style="width:550px">
-                        <col style="width:50px">
-                        <col style="width:90px">
-                        <col style="width:120px">
-                    </colgroup>
-                    <thead>
-                        <th>Id_truyen</th>
-                        <th>TenTruyen</th>
-                        <th>Id_Chuong</th> 
-                        <th>TenChuong</th>
-                        <th>SoChuong</th>
-                        <th>
-                            <button id="addstoryBtn">Thêm chương</button>
-                            <script>
-                                document.getElementById("addstoryBtn").onclick = function() {
-                                    window.location.href = "add.php";
-                                };
-                            </script>
-                        </th>
-                        <th></th>
-                    </thead>
-                    <tbody>
-                        <?php
-                        include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
-                        $result = mysqli_query($conn, "SELECT truyen.*, chuong.* FROM truyen JOIN chuong ON truyen.Id_truyen = chuong.Id_truyen");
-                        while ($row = mysqli_fetch_assoc($result)) {
-                        ?>
-                            <tr>
-                                <td style="text-align: center;"><?php echo $row['Id_truyen'] ?></td>
-                                <td><?php echo $row['Ten'] ?></td>
-                                <td><?php echo $row['Id_chuong'] ?></td>
-                                <td><?php echo $row['TenChuong'] ?></td>
-                                <td><?php echo $row['SoChuong'] ?></td>
-                                <td>
-                                    <a href="editing.php?id=<?php echo $row['Id_truyen']; ?>">
-                                        Edit
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="../actions/deleteTruyen.php?id=<?php echo $row['Id_truyen']; ?>">
-                                        Delete
-                                    </a>
-                                </td>
-                            </tr>
-                        <?php
-                        }
-                        ?>
-                    </tbody>
-                </table>
+               <?php
+                    if ($type == 'truyen') 
+                    {
+                        include "../components/tableTruyen.php";
+                    }
+                    elseif ($type == 'chuong') 
+                    {
+                        include "../components/tableChuong.php";
+                    }
+                    elseif ($type == 'users')
+                    {
+                       include "../components/tableUser.php";
+                    }
+               ?>
             </div>
         </div>
     </body>
