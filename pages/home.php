@@ -33,7 +33,7 @@
         }
         else {
             $username = "";
-            $avatar = "gamingcat.jpg";
+            $avatar = "logo.jpg";
         }
         ?>
 <!----TOP---->

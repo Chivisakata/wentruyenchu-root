@@ -30,7 +30,6 @@
     <div class="justUpdate">
         <div>
             <p class="resultStr">Kết quả cho: <b><?php echo $keyword;?></b></p>
-            <button>></button>
         </div>
         <div class="wrapper">
             <?php

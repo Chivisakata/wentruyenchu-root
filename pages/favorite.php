@@ -28,7 +28,6 @@
     <div class="justUpdate">
         <div>
             <p class="resultStr">Danh sách truyện đã lưu:</p>
-            <button>></button>
         </div>
         <div class="wrapper">
             <?php
