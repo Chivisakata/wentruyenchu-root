@@ -185,7 +185,7 @@
                     </div>
                 </div>
 
-<!----NGÔN TÌNH---->
+<!----NGÔN TÌNH--->
                 <div class="newest">
                     <div>
                         <p>Truyện Ngôn Tình:</p>
