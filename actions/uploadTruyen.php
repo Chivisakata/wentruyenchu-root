@@ -6,7 +6,7 @@ if (!isset($_SESSION['Role']) || $_SESSION['Role'] !== 'admin') {
         exit();
         }
 
-include 'connect.php';
+include 'config.php';
 // Lấy dữ liệu từ form
 $ten = $_POST['Ten'];
 $tacgia = $_POST['TacGia'];

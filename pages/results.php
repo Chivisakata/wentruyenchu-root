@@ -25,17 +25,27 @@
 </head>
 
 <body>
+    <?php include '../actions/config.php'; // Kết nối đến cơ sở dữ liệu ?>
     <?php
     $keyword = $_GET['keyword'] ?? '';
+    $categorie = $_GET['categorie'] ?? '';
     ?>
     <div class="justUpdate">
         <div>
-            <p class="resultStr">Kết quả cho: <b><?php echo $keyword;?></b></p>
+            <p class="resultStr">Kết quả cho: <b><?php echo trim($keyword . $categorie);?></b></p>
         </div>
         <div class="wrapper">
             <?php
-            include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
-            $result = mysqli_query($conn, "SELECT * FROM truyen WHERE (Ten LIKE '%$keyword%' OR TacGia LIKE '%$keyword%' OR TheLoai LIKE '%$keyword%')");
+            $sql = "SELECT * FROM truyen";
+            if (!empty(trim($keyword))) {
+                $sql = "SELECT * FROM truyen 
+                        WHERE Ten LIKE '%$keyword%' 
+                        OR TacGia LIKE '%$keyword%'";
+            } elseif (!empty(trim($categorie))) {
+                $sql = "SELECT * FROM truyen 
+                        WHERE TheLoai LIKE '%$categorie%'";
+            }
+            $result = mysqli_query($conn, $sql);
             while ($row = mysqli_fetch_assoc($result)) {
             ?>
                 <a href="details.php?id=<?php echo $row['Id_truyen']; ?>">

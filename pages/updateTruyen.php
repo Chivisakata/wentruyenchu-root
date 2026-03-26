@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Add</title>
+        <title>Update Truyen</title>
         <link rel="stylesheet" href="../css/updateTruyen.css">
         <link rel="icon" href="../images/logo.jpg">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
         
         <?php 
             $idTruyen = (int)$_GET['id'];
-            include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
+            include '../actions/config.php'; // Kết nối đến cơ sở dữ liệu
             $result = mysqli_query($conn, "SELECT * FROM truyen WHERE Id_truyen = $idTruyen");
             $row = mysqli_fetch_assoc($result);
         ?>

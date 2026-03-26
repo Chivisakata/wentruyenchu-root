@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "connect.php"; // file connect DB
+require_once "config.php"; // file config DB
 
 if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
     $fileTmpPath = $_FILES['avatar']['tmp_name'];

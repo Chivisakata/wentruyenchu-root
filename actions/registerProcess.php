@@ -1,5 +1,5 @@
 <?php
-require_once "connect.php";
+require_once "config.php";
 session_start(); //gọi session để lưu biến session sau này
 
 $username = trim($_POST["username"] ?? "");
