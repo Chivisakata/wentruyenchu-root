@@ -65,7 +65,7 @@ $stmt->bind_param(
 );
 
 if ($stmt->execute()) {
-    $_SESSION["success"] = "Thêm thành công $id";
+    $_SESSION["success"] = "Cập nhật truyện thành công";
 } else {
     $_SESSION["error"] = "Cập nhật truyện thất bại!";
 }

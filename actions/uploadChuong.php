@@ -26,9 +26,9 @@ $stmt->bind_param(
 );
 
 if ($stmt->execute()) {
-    $_SESSION["success"] = "Thêm chuong thành công!";
+    $_SESSION["success"] = "Thêm chương thành công!";
 } else {
-    $_SESSION["error"] = "Thêm chuong thất bại!";
+    $_SESSION["error"] = "Thêm chương thất bại!";
 }
 header("Location: ../pages/admin.php");
 exit();

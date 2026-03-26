@@ -30,7 +30,7 @@ $stmt->bind_param(
 );
 
 if ($stmt->execute()) {
-    $_SESSION["success"] = "Cập nhật chương thành công $id";
+    $_SESSION["success"] = "Cập nhật chương thành công";
 } else {
     $_SESSION["error"] = "Cập nhật chương thất bại!";
 }
