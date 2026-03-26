@@ -24,7 +24,7 @@
 <hr>
             <div class="menu" style="width:1200px; margin-left:100px;">
                 <?php
-                    include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
+                    include '../actions/config.php'; // Kết nối đến cơ sở dữ liệu
                     $result = mysqli_query($conn, "SELECT * FROM truyen WHERE Id_truyen = " . $_GET['id']);
                     $row = mysqli_fetch_assoc($result);
                     if($row) {

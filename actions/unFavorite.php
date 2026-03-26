@@ -1,7 +1,7 @@
 
 <?php
 session_start();
-include 'connect.php';
+include 'config.php';
 
 $userId = $_SESSION['User_id'];
 $truyenId = $_GET['id'];

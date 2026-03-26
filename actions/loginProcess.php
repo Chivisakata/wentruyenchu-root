@@ -1,5 +1,5 @@
 <?php
-require_once "connect.php";
+require_once "config.php";
 session_start(); //gọi session để lưu biến session sau này
 $username = trim($_POST["username"] ?? "");
 $password = trim($_POST["password"] ?? "");
@@ -10,10 +10,8 @@ $password = trim($_POST["password"] ?? "");
 // Chuẩn bị câu lệnh SQL
 $sql = "SELECT * FROM users WHERE User_name = ?";
 $stmt = $conn->prepare($sql);
-
 // Gắn tham số vào dấu ?
 $stmt->bind_param("s", $username);
-
 // Thực thi truy vấn
 $stmt->execute();
 

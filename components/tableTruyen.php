@@ -21,7 +21,7 @@
     </thead>
     <tbody>
         <?php
-        include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
+        include '../actions/config.php'; // Kết nối đến cơ sở dữ liệu
         $result = mysqli_query($conn, "SELECT * FROM truyen");
         while ($row = mysqli_fetch_assoc($result)) {
         ?>

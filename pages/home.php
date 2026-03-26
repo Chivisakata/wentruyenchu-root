@@ -12,7 +12,7 @@
     </head>
 
     <body>
-        <?php include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu ?>
+        <?php include '../actions/config.php'; // Kết nối đến cơ sở dữ liệu ?>
         <?php
         session_start();// Bắt đầu session để truy cập biến session
         //kiểm tra session đăng nhập

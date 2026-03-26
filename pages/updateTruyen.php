@@ -22,7 +22,7 @@
         
         <?php 
             $idTruyen = (int)$_GET['id'];
-            include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
+            include '../actions/config.php'; // Kết nối đến cơ sở dữ liệu
             $result = mysqli_query($conn, "SELECT * FROM truyen WHERE Id_truyen = $idTruyen");
             $row = mysqli_fetch_assoc($result);
         ?>

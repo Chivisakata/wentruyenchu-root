@@ -17,7 +17,7 @@
     </thead>
     <tbody>
         <?php
-        include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
+        include '../actions/config.php'; // Kết nối đến cơ sở dữ liệu
         $result = mysqli_query($conn, "SELECT truyen.*, chuong.* FROM truyen JOIN chuong ON truyen.Id_truyen = chuong.Id_truyen");
         while ($row = mysqli_fetch_assoc($result)) {
         ?>

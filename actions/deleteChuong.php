@@ -5,7 +5,7 @@ if (!isset($_SESSION['Role']) || $_SESSION['Role'] !== 'admin') {
         header("Location: /403.php"); 
         exit();
         }
-include 'connect.php';
+include 'config.php';
 
 $idChuong = (int)$_GET['Id_chuong'];
 // Chuẩn bị câu lệnh SQL
@@ -19,7 +19,6 @@ if ($stmt->execute()) {
 } else {
     $_SESSION["error"] = "Lỗi khi xóa chương!";
 }
-
 // Redirect về admin
 header("Location: ../pages/admin.php");
 exit();

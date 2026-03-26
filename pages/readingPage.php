@@ -26,7 +26,7 @@
     <body>
         <?php
         //lấy nội dung truyện
-            include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
+            include '../actions/config.php'; // Kết nối đến cơ sở dữ liệu
             $result = mysqli_query($conn, "SELECT * FROM chuong WHERE Id_chuong = " . $_GET['id_chuong']);
             $row = mysqli_fetch_assoc($result);
             if($row) {

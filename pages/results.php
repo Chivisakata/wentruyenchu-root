@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <?php include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu ?>
+    <?php include '../actions/config.php'; // Kết nối đến cơ sở dữ liệu ?>
     <?php
     $keyword = $_GET['keyword'] ?? '';
     $categorie = $_GET['categorie'] ?? '';
