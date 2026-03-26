@@ -4,8 +4,6 @@ session_start(); //gọi session để lưu biến session sau này
 $username = trim($_POST["username"] ?? "");
 $password = trim($_POST["password"] ?? "");
 
-/*check valid lại lần nữa*/
-
 
 // Chuẩn bị câu lệnh SQL
 $sql = "SELECT * FROM users WHERE User_name = ?";
@@ -33,7 +31,6 @@ if ($user && password_verify($password, $user['Pass_word'])) {
     $_SESSION['Role'] = $user['Role'];
     // Tạo session đăng nhập thành công
     $_SESSION["success"] = "Đăng nhập thành công!";
-
     //Điều hướng
     if($user['Role'] == "admin")//Trang admin
         {

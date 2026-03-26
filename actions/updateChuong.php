@@ -8,11 +8,11 @@ if (!isset($_SESSION['Role']) || $_SESSION['Role'] !== 'admin') {
         
 include 'config.php';
 // Lấy dữ liệu từ form
-$idChuong = (int)$_POST['Id_chuong'];
-$idTruyen = (int)$_POST['Id_truyen'];
+$idChuong = $_POST['Id_chuong'];
+$idTruyen = $_POST['Id_truyen'];
 $tenChuong = $_POST['TenChuong'];
 $noiDung = $_POST['NoiDung'];
-$SoChuong = (int)$_POST['SoChuong'];
+$SoChuong = $_POST['SoChuong'];
 
 // Lưu DB
 $sql = "UPDATE chuong 

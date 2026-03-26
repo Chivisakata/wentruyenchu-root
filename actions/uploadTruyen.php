@@ -24,9 +24,8 @@ if (isset($_FILES['AnhBia']) && $_FILES['AnhBia']['error'] === UPLOAD_ERR_OK) {
 
     // Lấy extension
     $fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
-
     // Chỉ cho phép JPG
-    if ($fileExt !== "jpg" && $fileType !== "image/jpeg") {
+    if ($fileExt !== "jpg" || $fileType !== "image/jpeg") {
         $_SESSION["error"] = "Chỉ cho phép file .jpg!";
         header("Location: ../pages/admin.php");
         exit();

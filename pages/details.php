@@ -26,7 +26,14 @@
             <div class="menu" style="width:1200px; margin-left:100px;">
                 <?php
                     include '../actions/config.php'; // Kết nối đến cơ sở dữ liệu
-                    $result = mysqli_query($conn, "SELECT * FROM truyen WHERE Id_truyen = " . $_GET['id']);
+                    $id = $_GET['id'];
+                    
+                    $sql = "SELECT * FROM truyen WHERE Id_truyen = ?";
+                    $stmt = $conn->prepare($sql);
+                    $stmt->bind_param("i", $id);
+                    $stmt->execute();
+
+                    $result = $stmt->get_result();
                     $row = mysqli_fetch_assoc($result);
                     if($row) {
                         $TenTruyen = $row['Ten'];
@@ -63,10 +70,15 @@
                         <div>
                             <?php if (isset($_SESSION['User_id'])):?>
                                 <?php
-                                    $userId = (int)$_SESSION['User_id'];
-                                    $truyenId = (int)$_GET['id'];
-                                    $favorite = mysqli_query($conn,"SELECT 1 FROM yeuthich WHERE Id_truyen = $truyenId AND Id_user = $userId");?>
-                                    <?php
+                                    $userId = $_SESSION['User_id'];
+                                    $truyenId = $_GET['id'];
+
+                                    $sql = "SELECT 1 FROM yeuthich WHERE Id_truyen = ? AND Id_user = ?";
+                                    $stmt = $conn->prepare($sql);
+                                    $stmt->bind_param("ii", $truyenId, $userId);
+                                    $stmt->execute();
+
+                                    $favorite = $stmt->get_result();
                                         if ($favorite->num_rows > 0){
                                             ?>
                                             <button class="save-unsave-btn" id="unFavoriteBtn">Đã Lưu</button>
@@ -101,7 +113,7 @@
                     <div class="list">
                         <ul class="listContainer">
                            <?php
-                            $id = (int)$_GET['id'];
+                            $id = $_GET['id'];
                             $sql = "SELECT * FROM chuong WHERE Id_truyen = ?";
                             $stmt = $conn->prepare($sql);
                             $stmt->bind_param("i", $id);

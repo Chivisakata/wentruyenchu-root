@@ -10,7 +10,6 @@ preBtn.forEach(btn => {
         const minChap = parseInt(btn.dataset.min);
         if (chap <= minChap) return;
         chap--;
-        console.log(chap);
         window.location.href = `?id_truyen=${id_truyen}&id_chuong=${chap}`;
         chap = parseInt(params.get("id_chuong"));
     });
@@ -20,7 +19,6 @@ nextBtn.forEach(btn => {
         const maxChap = parseInt(btn.dataset.max);
         if (chap >= maxChap) return;
         chap++;
-        console.log(chap);
         window.location.href = `?id_truyen=${id_truyen}&id_chuong=${chap}`;
         chap = parseInt(params.get("id_chuong"));
     });
