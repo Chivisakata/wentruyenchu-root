@@ -11,7 +11,7 @@ include 'config.php';
 $ten = $_POST['Ten'];
 $tacgia = $_POST['TacGia'];
 $theloai = $_POST['TheLoai'];
-$tongsochuong = $_POST['TongSoChuong'];
+$tongsochuong = !empty(trim($_POST['TongSoChuong'])) ? $_POST['TongSoChuong'] : null;
 $trangthai = $_POST['TrangThai'];
 $gioithieu = $_POST['GioiThieu'];
 
