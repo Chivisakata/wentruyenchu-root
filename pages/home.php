@@ -165,26 +165,6 @@
                             ?>
                     </div>
                 </div>
-<!----Truyện Full---->
-                <div class="fullNovel">
-                    <div>
-                        <p>Truyện FULL:</p>
-                    </div>
-                    <div class="wrapper">
-                            <?php
-                            $result = mysqli_query($conn, "SELECT * FROM truyen WHERE TrangThai = 'Hoàn thành';");
-                            while($row = mysqli_fetch_assoc($result)) {
-                            ?>
-                                    <a href="details.php?id=<?php echo $row['Id_truyen']; ?>">
-                                        <img src="../images/<?php echo $row['AnhBia']; ?>">
-                                        <p><?php echo $row['Ten']; ?></p>
-                                    </a>
-                            <?php
-                            }
-                            ?>
-                    </div>
-                </div>
-
 <!----NGÔN TÌNH---->
                 <div class="romance">
                     <div>
@@ -225,6 +205,25 @@
                             ?>
                     </div>
                 </div>
+        </div>
+<!----Truyện Full---->
+        <div class="fullNovel">
+            <div>
+                <p>Truyện FULL:</p>
+            </div>
+            <div class="wrapper">
+                    <?php
+                    $result = mysqli_query($conn, "SELECT * FROM truyen WHERE TrangThai = 'Hoàn thành';");
+                    while($row = mysqli_fetch_assoc($result)) {
+                    ?>
+                            <a href="details.php?id=<?php echo $row['Id_truyen']; ?>">
+                                <img src="../images/<?php echo $row['AnhBia']; ?>">
+                                <p><?php echo $row['Ten']; ?></p>
+                            </a>
+                    <?php
+                    }
+                    ?>
+            </div>
         </div>
         <?php include "../components/footer.php";?>
         <script>
