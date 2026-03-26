@@ -53,9 +53,9 @@
                             </form>
                             <button><a href="favorite.php" style="text-decoration: none;color: inherit;display:block">Truyện đã lưu</a></button>
                             <?php
-                            if (isset($_SESSION['Role']) || $_SESSION['Role'] !== 'admin') {
+                            if (isset($_SESSION['Role']) && $_SESSION['Role'] == 'admin') {
                             ?>
-                            <button><a href="admin.php" style="text-decoration: none;color: inherit;display:block">Trang admin</a></button>
+                                <button><a href="admin.php" style="text-decoration: none;color: inherit;display:block">Trang admin</a></button>
                             <?php
                             }
                             ?>
