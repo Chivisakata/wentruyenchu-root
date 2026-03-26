@@ -146,10 +146,10 @@
                 </div>
 
 <!----MỚI UPDATE---->
+            <div>
                 <div class="justUpdate">
                     <div>
                         <p>Vừa Cập Nhật:</p>
-                        <button>></button>
                     </div>
                     <div class="wrapper">
                             <?php
@@ -163,12 +163,12 @@
                             <?php
                             }
                             ?>
+                    </div>
                 </div>
 <!----Truyện Full---->
                 <div class="fullNovel">
                     <div>
                         <p>Truyện FULL:</p>
-                        <button>></button>
                     </div>
                     <div class="wrapper">
                             <?php
@@ -186,10 +186,9 @@
                 </div>
 
 <!----NGÔN TÌNH---->
-                <div class="newest">
+                <div class="romance">
                     <div>
                         <p>Truyện Ngôn Tình:</p>
-                        <button>></button>
                     </div>
                     <div class="wrapper">
                             <?php
@@ -208,10 +207,9 @@
 
 
 <!----BÁCH HỢP-->
-                <div class="mostLoved">
+                <div class="girlLove">
                     <div>
                         <p>Truyện Bách Hợp:</p>
-                        <button>></button>
                     </div>
                     <div class="wrapper">
                             <?php

@@ -165,7 +165,7 @@ body
 
 
 /* Just Update Menu */
-.justUpdate, .newest, .fullNovel, .topOTW, .mostLoved {
+.justUpdate, .romance, .fullNovel, .girlLove {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -173,53 +173,14 @@ body
 }
 
 .justUpdate > div:first-child, 
-.newest > div:first-child, 
+.romance > div:first-child, 
 .fullNovel > div:first-child, 
-.topOTW > div:first-child, 
-.mostLoved > div:first-child
+.girlLove > div:first-child
 {
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     padding-bottom:10px;
-}
-.justUpdate > div button,
-.newest > div button, 
-.fullNovel > div button, 
-.topOTW > div button, 
-.mostLoved > div button
-{
-    width:5%;
-    height:auto;
-    font-size: 20px;
-    border:none;
-    border-radius:30px;
-    background-color: white;
-}
-
-.topOTW > div button, .mostLoved > div button
-{
-    background-color: rgb(29,29,29);
-    color:white;
-}
-
-.justUpdate > div button:hover,
-.newest > div button:hover, 
-.fullNovel > div button:hover, 
-.topOTW > div button:hover, 
-.mostLoved > div button:hover
-{
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-.justUpdate > div button:active,
-.newest > div button:active, 
-.fullNovel > div button:active, 
-.topOTW > div button:active, 
-.mostLoved > div button:active
-{
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.2);
 }
 
 
@@ -231,10 +192,15 @@ body
     padding-bottom: 10px; 
 }
 
-.topOTW, .mostLoved
+.justUpdate, .fullNovel
 {
     background-color: rgb(29,29,29);
     color:white;
+}
+.romance, .girlLove
+{
+    background-color: white;
+    color:black;
 }
 
 .wrapper > a {

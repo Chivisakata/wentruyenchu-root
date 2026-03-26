@@ -16,7 +16,7 @@
             <!--TOP-->
             <div class="navBar">
                 <div>
-                    <a href="home.php"><img src="../images/homeIcon.png" style="width:56px; height:56px;"></a>
+                    <a href="home.php" style="margin: 15px 0px 15px 20px;"><img src="../images/homeIcon.png" style="width:56px; height:56px;"></a>
                 </div>
             </div>
             <!--MENU-->
@@ -82,15 +82,6 @@
                                         ?><a href="login.php"><button class="save-unsave-btn" hre>Đăng nhập để lưu</button></a><?php
                                     endif;?>
                         </div>
-                        <p>Rating:</p>
-                        <div class="rating">
-                            <input type="radio" name="star" id="star5"><label for="star5" class="fa-solid fa-star"></label>
-                            <input type="radio" name="star" id="star4"><label for="star4" class="fa-solid fa-star"></label>
-                            <input type="radio" name="star" id="star3"><label for="star3" class="fa-solid fa-star"></label>
-                            <input type="radio" name="star" id="star2"><label for="star2" class="fa-solid fa-star"></label>
-                            <input type="radio" name="star" id="star1"><label for="star1" class="fa-solid fa-star"></label>
-                        </div>
-                        <p>4/5 (12 danh gia)</p>
                     </div>
                 </div>
                 <div class="detail">
@@ -121,46 +112,6 @@
                         </ul>
                        
                     </div>
-                </div>
-            </div>
-<hr>
-            <div class="comment">
-                <h3>COMMENTS:</h3>
-                <div class=userComment>
-                    <a><img src="../images/placeholder.jpg"></a>
-                    <textarea></textarea>
-                    <button>Đăng</button>
-                </div>
-                <div class="commentsSection">
-                    <div>
-                        <div>
-                            <a><img src="../images/placeholder.jpg"></a>
-                            <b>USER123</b>
-                        </div>
-                        <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>
-                    </div>
-                    <div>
-                        <div>
-                            <a><img src="../images/placeholder.jpg"></a>
-                            <b>USER123</b>
-                        </div>
-                        <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>
-                    </div>
-                    <div>
-                        <div>
-                            <a><img src="../images/placeholder.jpg"></a>
-                            <b>USER123</b>
-                        </div>
-                        <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>
-                    </div>
-                    <div>
-                        <div>
-                            <a><img src="../images/placeholder.jpg"></a>
-                            <b>USER123</b>
-                        </div>
-                        <p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></p>
-                    </div>
-                    
                 </div>
             </div>
         </div>
