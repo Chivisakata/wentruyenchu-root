@@ -28,7 +28,12 @@
         <?php
         //lấy nội dung truyện
             include '../actions/config.php'; // Kết nối đến cơ sở dữ liệu
-            $result = mysqli_query($conn, "SELECT * FROM chuong WHERE Id_chuong = " . $_GET['id_chuong']);
+            $id_chuong = (int)$_GET['id_chuong'];
+            $sql = "SELECT * FROM chuong WHERE Id_chuong = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("i", $id_chuong);
+            $stmt->execute();
+            $result = $stmt->get_result();
             $row = mysqli_fetch_assoc($result);
             if($row) {
                 $TenChuong = $row['TenChuong'];

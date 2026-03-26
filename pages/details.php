@@ -101,7 +101,12 @@
                     <div class="list">
                         <ul class="listContainer">
                            <?php
-                            $chuong = mysqli_query($conn, "SELECT * FROM chuong WHERE Id_truyen = " . $_GET['id']);
+                            $id = (int)$_GET['id'];
+                            $sql = "SELECT * FROM chuong WHERE Id_truyen = ?";
+                            $stmt = $conn->prepare($sql);
+                            $stmt->bind_param("i", $id);
+                            $stmt->execute();
+                            $chuong = $stmt->get_result();
                             while($row = mysqli_fetch_assoc($chuong)) {
                             ?> 
                                    <li> 
