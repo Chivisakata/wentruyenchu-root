@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Chi tiết truyện</title>
         <link rel="stylesheet" a href="../css/details.css">
+        <link rel="icon" href="../images/logo.jpg">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
@@ -16,7 +17,7 @@
             <!--TOP-->
             <div class="navBar">
                 <div>
-                    <a href="home.php" style="margin: 15px 0px 15px 20px;"><img src="../images/homeIcon.png" style="width:56px; height:56px;"></a>
+                    <a href="home.php" style="margin: 10px 0px 15px 20px;"><img src="../images/logo.jpg" style="width:80; height:80; border-radius:50px; border:2px solid white;"></a>
                 </div>
             </div>
             <!--MENU-->

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>UpdateChuong</title>
         <link rel="stylesheet" href="../css/updateChuong.css">
+        <link rel="icon" href="../images/logo.jpg">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
@@ -28,7 +29,7 @@
         ?>
         <div class="body-container">
             <div class="topBar">    <!--LOGO stand for HOME-->
-                <a href="admin.php"><img src="../images/homeIcon.png"></a>   
+                <a href="admin.php" style="margin: 10px 0px 15px 20px;"><img src="../images/logo.jpg" style="width:80px; height:80; border-radius:50px; border:2px solid white;"></a>   
             </div>
                 <div class="addMenu">
                     <div class="right">
