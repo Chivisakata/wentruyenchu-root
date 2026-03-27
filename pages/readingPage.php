@@ -10,18 +10,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
-        <script>
-            function changeBGColor(color, textColor)
-            {
-                document.body.style.backgroundColor = color;
-                document.body.style.color = textColor;
-            }
-
-            function changeFont(name)
-            {
-                document.body.style.fontFamily = name;
-            }
-        </script>
         <script src="../scripts/chapterSwitcher.js" defer></script>
     </head>
     <body>
@@ -45,17 +33,17 @@
             </summary>
             <div class="fab-box">
                 <div class="box-top">
-                    <button onclick="changeBGColor('Black', 'White')">Black</button>
-                    <button onclick="changeBGColor('White', 'Black')">White</button>
-                    <button onclick="changeBGColor('Beige', 'Black')">Beige</button>
+                    <button onclick="applyTheme('Black')">Black</button>
+                    <button onclick="applyTheme('White')">White</button>
+                    <button onclick="applyTheme('Beige')">Beige</button>
                 </div>
                 <hr>
                 <div class="box-bottom">
-                    <button onclick="changeFont('Roboto Mono')">Roboto Mono</button>
-                    <button onclick="changeFont('Serif')">Serif</button>
-                    <button onclick="changeFont('sans-serif')">Sans Serif</button>
-                    <button onclick="changeFont('Source Sans Pro')">Source Sans Pro</button>
-                    <button onclick="changeFont('Monospace')">Monospace</button>
+                    <button onclick="applyFont('Roboto Mono')">Roboto Mono</button>
+                    <button onclick="applyFont('Serif')">Serif</button>
+                    <button onclick="applyFont('sans-serif')">Sans Serif</button>
+                    <button onclick="applyFont('Source Sans Pro')">Source Sans Pro</button>
+                    <button onclick="applyFont('Monospace')">Monospace</button>
                 </div>
             </div>
         </details>
@@ -89,5 +77,43 @@
                 </div>
         </div>
         <?php include "../components/footer.php";?>
+         <script>
+            function applyTheme(color) {
+                if (color === 'Black') {
+                    document.body.style.backgroundColor = 'black';
+                    document.body.style.color = 'white';
+                } else if (color === 'Beige') {
+                    document.body.style.backgroundColor = 'rgb(245, 245, 220)';
+                    document.body.style.color = 'black';
+                } else {
+                    document.body.style.backgroundColor = 'white';
+                    document.body.style.color = 'black';
+                }
+
+                //Save theme locally
+                localStorage.setItem('user-theme', color);
+            }
+
+            function applyFont(fontName) {
+                document.body.style.fontFamily = fontName;
+                // SAVE the choice
+                localStorage.setItem('user-font', fontName);
+            }
+
+            //Load saved Theme or saved Font if save locally
+            document.addEventListener('DOMContentLoaded', () => {
+            // Check if a theme was saved previously
+            const savedTheme = localStorage.getItem('user-theme');
+            if (savedTheme) {
+                applyTheme(savedTheme);
+            }
+
+            // Check if a font was saved previously
+            const savedFont = localStorage.getItem('user-font');
+            if (savedFont) {
+                applyFont(savedFont);
+            }
+        });
+        </script>
     </body>
 </html>
