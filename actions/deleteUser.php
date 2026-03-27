@@ -6,7 +6,7 @@ if (!isset($_SESSION['Role']) || $_SESSION['Role'] !== 'admin') {
         exit();
         }
 
-include 'connect.php';
+include 'config.php';
 $idUser = (int)$_GET['Id_user'];
 // Chuẩn bị câu lệnh SQL
 $sql = "DELETE FROM users WHERE Id_user = ?";

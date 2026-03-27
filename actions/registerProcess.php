@@ -1,5 +1,5 @@
 <?php
-require_once "connect.php";
+require_once "config.php";
 session_start(); //gọi session để lưu biến session sau này
 
 $username = trim($_POST["username"] ?? "");
@@ -48,7 +48,6 @@ if ($result->num_rows > 0) {
 }
 /* hash password */
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-/*set role
 
 /* insert database */
 $sql = "INSERT INTO Users (User_name, Pass_word) VALUES (?, ?)";

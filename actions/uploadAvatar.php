@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "connect.php"; // file connect DB
+require_once "config.php"; // file config DB
 
 if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
     $fileTmpPath = $_FILES['avatar']['tmp_name'];
@@ -9,7 +9,7 @@ if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
 
     // Kiểm tra file .jpg
     $fileExt = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
-    if ($fileExt !== "jpg" && $fileType !== "image/jpeg") {
+    if ($fileExt !== "jpg" || $fileType !== "image/jpeg") {
         die("Chỉ được upload file JPG!");
     }
 

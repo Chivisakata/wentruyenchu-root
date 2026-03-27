@@ -6,13 +6,13 @@ if (!isset($_SESSION['Role']) || $_SESSION['Role'] !== 'admin') {
         exit();
         }
         
-include 'connect.php';
+include 'config.php';
 // Lấy dữ liệu từ form
-$idChuong = (int)$_POST['Id_chuong'];
-$idTruyen = (int)$_POST['Id_truyen'];
+$idChuong = $_POST['Id_chuong'];
+$idTruyen = $_POST['Id_truyen'];
 $tenChuong = $_POST['TenChuong'];
 $noiDung = $_POST['NoiDung'];
-$SoChuong = (int)$_POST['SoChuong'];
+$SoChuong = $_POST['SoChuong'];
 
 // Lưu DB
 $sql = "UPDATE chuong 
@@ -30,7 +30,7 @@ $stmt->bind_param(
 );
 
 if ($stmt->execute()) {
-    $_SESSION["success"] = "Cập nhật chương thành công $id";
+    $_SESSION["success"] = "Cập nhật chương thành công";
 } else {
     $_SESSION["error"] = "Cập nhật chương thất bại!";
 }

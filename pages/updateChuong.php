@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>UpdateChuong</title>
+        <title>Update Chuong</title>
         <link rel="stylesheet" href="../css/updateChuong.css">
         <link rel="icon" href="../images/logo.jpg">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
         
         <?php 
             $idChuong = (int)$_GET['Id_chuong'];
-            include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
+            include '../actions/config.php'; // Kết nối đến cơ sở dữ liệu
             $result = mysqli_query($conn, "SELECT * FROM chuong WHERE Id_chuong = $idChuong");
             $row = mysqli_fetch_assoc($result);
         ?>

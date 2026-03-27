@@ -6,12 +6,12 @@ if (!isset($_SESSION['Role']) || $_SESSION['Role'] !== 'admin') {
         exit();
         }
 
-include 'connect.php';
+include 'config.php';
 // Lấy dữ liệu từ form
-$idTruyen = (int)$_POST['Id_truyen'];
+$idTruyen = $_POST['Id_truyen'];
 $tenChuong = $_POST['TenChuong'];
 $noiDung = $_POST['NoiDung'];
-$SoChuong = (int)$_POST['SoChuong'];
+$SoChuong = $_POST['SoChuong'];
 
 // Lưu DB
 $sql = "INSERT INTO chuong (Id_truyen, TenChuong, NoiDung, SoChuong) VALUES (?, ?, ?, ?)";
@@ -26,9 +26,9 @@ $stmt->bind_param(
 );
 
 if ($stmt->execute()) {
-    $_SESSION["success"] = "Thêm chuong thành công!";
+    $_SESSION["success"] = "Thêm chương thành công!";
 } else {
-    $_SESSION["error"] = "Thêm chuong thất bại!";
+    $_SESSION["error"] = "Thêm chương thất bại!";
 }
 header("Location: ../pages/admin.php");
 exit();

@@ -33,7 +33,7 @@
         <div class="wrapper">
             <?php
             $userId = $_SESSION['User_id'];
-            include '../actions/connect.php'; // Kết nối đến cơ sở dữ liệu
+            include '../actions/config.php'; // Kết nối đến cơ sở dữ liệu
             $result = mysqli_query($conn, "SELECT truyen.* FROM yeuthich JOIN truyen ON yeuthich.Id_truyen = truyen.Id_truyen WHERE yeuthich.Id_user = $userId");
             while ($row = mysqli_fetch_assoc($result)) {
             ?>
